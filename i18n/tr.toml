@@ -128,16 +128,16 @@ other = "Paylaş"
 
 # === posts/single.html ===
 [contents]
-other = "İçerikler"
+other = "İçerik"
 
 [publishedOnDate]
 other = "Yayınlanma tarihi {{ .Date }}"
 
 [includedIn]
-other = "included in "
+other = " "  # "included in"
 
 [includedInAnd]
-other = "and"
+other = "ve"
 
 [includedInCategories]
 one = "kategori {{ .Categories }}"
