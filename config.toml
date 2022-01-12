@@ -1,9 +1,11 @@
-baseURL = "http://example.org/"
+baseURL = "http://gerdanfs.github.io/"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
 title = "My New Hugo Site"
+
+publishDir = "docs"
 
 # Initial configuration was done according to this page:
 # https://hugodoit.pages.dev/theme-documentation-basics/#basic-configuration
@@ -53,3 +55,9 @@ theme = "DoIt"
 
 
 
+##########################################
+# FSG: My custom variables and parameters
+[params.fsg]
+  enableCustomDebugger = false
+
+##########################################

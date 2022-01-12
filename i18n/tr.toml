@@ -1,0 +1,255 @@
+# Translations for Turkish
+# Türkçe için çeviriler
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === baseof ==
+[backToTop]
+other = "En başa dön"
+
+[viewComments]
+other = "Yorumlara bak"
+# === baseof ==
+
+# === Post ===
+[posts]
+other = "Yazılar"
+# === Post ===
+
+# === Taxonomy ===
+[allSome]
+other = "Bütün {{ .Some }}"
+
+[tag]
+other = "Etiket"
+
+[tags]
+other = "Etiketler"
+
+[category]
+other = "Kategori"
+
+[categories]
+other = "Kategoriler"
+
+[series]
+other = "Seriler"
+# === Taxonomy ===
+
+# === Section ===
+
+[recentlyUpdated]
+other = "Yakın zamanda güncellenmiş"
+
+# === Section ===
+
+# === Pagination ===
+[more]
+other = "Daha Fazla"
+# === Pagination ===
+
+# === partials/header.html ===
+[selectLanguage]
+other = "Dili seç"
+
+[switchTheme]
+other = "Temayı değiştir"
+
+[Light]
+other = "Light"
+
+[Dark]
+other = "Dark"
+
+[Black]
+other = "Black"
+
+[Auto]
+other = "Auto"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBy]
+other = "Powered by {{ .Hugo }}"
+
+[hostedOn]
+other = "Hosted on {{ .Host }}"
+
+[theme]
+other = "Tema - {{ .Theme }}"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "en"
+
+[valinePlaceholder]
+other = "Yorumunuz..."
+
+[facebookLanguageCode]
+other = "tr_TR"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[search]
+other = "Ara"
+
+[searchPlaceholder]
+other = "Başlıkları ya da içerikleri ara..."
+
+[clear]
+other = "Temizle"
+
+[cancel]
+other = "İptal et"
+
+[noResultsFound]
+other = "Herhangi bir sonuç bulunamadı"
+
+[lunrLanguageCode]
+other = "en"
+
+[copyToClipboard]
+other = "Panoya kopyala"
+
+[cookieconsentMessage]
+other = "Bu web sitesi, deneyiminizi geliştirmek için çerezler kullanır."
+
+[cookieconsentDismiss]
+other = "Got it!"
+
+[cookieconsentLink]
+other = "Learn more"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "Paylaş"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[contents]
+other = "İçerikler"
+
+[publishedOnDate]
+other = "Yayınlanma tarihi {{ .Date }}"
+
+[includedIn]
+other = "included in "
+
+[includedInAnd]
+other = "and"
+
+[includedInCategories]
+one = "kategori {{ .Categories }}"
+other = "kategoriler {{ .Categories }}"
+
+[includedInSeries]
+other = "seri {{ .Series }}"
+
+[wordCount]
+one = "Kelime sayısı"
+other = "{{ .Count }} kelime"
+
+[readingTime]
+one = "Bir dakika"
+other = "{{ .Count }} dakika"
+
+[views]
+other = "views"
+
+[comments]
+other = "yorumlar"
+
+[author]
+other = "Yazar"
+
+[updatedOnDate]
+other = "Güncellenme tarihi {{ .Date }}"
+
+[readMarkdown]
+other = "Read markdown"
+
+[viewSource]
+other = "Kaynağa bak"
+
+[editThisPage]
+other = "Edit this page"
+
+[reportThisPage]
+other = "Report issue"
+
+[back]
+other = "Back"
+
+[home]
+other = "Ana Sayfa"
+
+[readMore]
+other = "Read more..."
+
+[outdatedInfoWarningBefore]
+other = "This article was last updated on "
+
+[outdatedInfoWarningAfter]
+other = ", the content may be out of date."
+
+[sponsor]
+other = "Sponsor"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Sayfa bulunamadı"
+
+[pageNotFoundText]
+other = "The page you're looking for doesn't exist. Sorry."
+# === 404.html ===
+
+# === shortcodes/admonition.html ===
+[note]
+other = "Note"
+
+[abstract]
+other = "Abstract"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tip"
+
+[success]
+other = "Success"
+
+[question]
+other = "Question"
+
+[warning]
+other = "Warning"
+
+[failure]
+other = "Failure"
+
+[danger]
+other = "Danger"
+
+[bug]
+other = "Bug"
+
+[example]
+other = "Example"
+
+[quote]
+other = "Quote"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[new]
+other = "YENİ"
+
+[changed]
+other = "DEĞİŞTİ"
+
+[deleted]
+other = "SİLİNDİ"
+# === shortcodes/version.html ===
