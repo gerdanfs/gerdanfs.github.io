@@ -1,12 +1,10 @@
-baseURL = "https://example.com" #"http://gerdanfs.github.io/"
-publishDir = "docs"
+baseURL = "http://gerdanfs.github.io/" #"https://example.com"
+publishDir = "docs"  # FSG: This is needed for github.pages
 
 # [en, tr, fr, pl, ...] determines default content language
 defaultContentLanguage = "en"
 # theme
 theme = "DoIt"
-# themes directory
-themesDir = "themes"
 # website title
 title = "Fatih Serhat Gerdan"
 # whether to use robots.txt
@@ -23,12 +21,10 @@ enableEmoji = true
     languageCode = "en"
     # language name
     languageName = "English"
-    # whether to include Chinese/Japanese/Korean
-    hasCJKLanguage = false
     # default amount of posts in each pages
-    paginate = 12
+    paginate = 15
     # [UA-XXXXXXXX-X] google analytics code
-    googleAnalytics = ""
+    googleAnalytics = "UA-217779143-1"
     # copyright description used only for seo schema
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     # Menu config
@@ -36,7 +32,7 @@ enableEmoji = true
       [[languages.en.menu.main]]
         identifier = "posts"
         # you can add extra information before the name (HTML format is supported), such as icons
-        pre = "/"
+        pre = ""
         # you can add extra information after the name (HTML format is supported), such as icons
         post = ""
         name = "Posts"
@@ -61,37 +57,53 @@ enableEmoji = true
         title = ""
         weight = 3
       [[languages.en.menu.main]]
+        identifier = "fields"
+        pre = ""
+        post = ""
+        name = "Fields"
+        url = "/fields/"
+        title = ""
+        weight = 4
+      [[languages.en.menu.main]]
         identifier = "series"
         pre = ""
         post = ""
         name = "Series"
         url = "/series/"
         title = ""
-        weight = 4
-      [[languages.en.menu.main]]
-        identifier = "authors"
-        pre = ""
-        post = ""
-        name = "Authors"
-        url = "/authors/"
-        title = ""
         weight = 5
       [[languages.en.menu.main]]
-        identifier = "showcase"
-        pre = "/"
+        identifier = "training"
+        pre = "⭐"
         post = ""
-        name = "Showcase"
-        url = "/showcase/"
+        name = "Training"
+        url = "/training/"
         title = ""
         weight = 6
       [[languages.en.menu.main]]
-        identifier = "documentation"
-        pre = ""
+        identifier = "reviews"
+        pre = "🔎"
         post = ""
-        name = "Docs"
-        url = "/categories/documentation/"
+        name = "Reviews"
+        url = "/reviews/"
         title = ""
         weight = 7
+      #[[languages.en.menu.main]]
+        #identifier = "paid_content"
+        #pre = "💲"
+        #post = ""
+        #name = "Paid"
+        #url = "/paid-content/"
+        #title = ""
+        #weight = 8
+      [[languages.en.menu.main]]
+        identifier = "etc"
+        pre = "🤪"
+        post = ""
+        name = "etc."
+        url = "/etc/"
+        title = ""
+        weight = 9
       [[languages.en.menu.main]]
         identifier = "about"
         pre = ""
@@ -99,7 +111,7 @@ enableEmoji = true
         name = "About"
         url = "/about/"
         title = ""
-        weight = 8
+        weight = 10
       [[languages.en.menu.main]]
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
@@ -107,12 +119,32 @@ enableEmoji = true
         name = ""
         url = "https://github.com/gerdanfs"
         title = "GitHub"
-        weight = 9
+        weight = 11
+      [[languages.en.menu.main]]
+          identifier = "twitter"
+          pre = "<i class='fab fa-twitter fa-fw'></i>"
+          post = ""
+          name = ""
+          url = "https://twitter.com/gerdanfs"
+          title = "Twitter"
+          weight = 12
+      #[[languages.en.menu.main]]
+          #identifier = "youtube"
+          #pre = "<i class='fab fa-youtube fa-fw'></i>"
+          #post = ""
+          #name = ""
+          #url = ""
+          #title = "Youtube"
+          #weight = 13
     [languages.en.params]
       # site description
       description = "A blog featuring interesting in-depth posts about programming (python), data science, machine learning, philosophy and sociology. Let's grow together!"
       # site keywords
-      keywords = ["Programming", "Python", "Data Science", "Machine Learning", "Philosophy", "Sociology", "Book Reviews", "Static Sites", "Hugo"]
+      keywords = ["Programming", "Python", "Data Science", "Machine Learning", "Philosophy", "Sociology", "Book Reviews", "Movie Reviews", "Static Sites", "Hugo"]
+      # titles
+      blogPostsTitle = "All Blog Posts in This Site"
+      mediumPostsTitle = "My Medium Posts"
+      langSuffix = "en"
       # App icon config
       [languages.en.params.app]
         # optional site title override for the app when added to an iOS home screen or Android launcher
@@ -129,7 +161,7 @@ enableEmoji = true
       [languages.en.params.search]
         enable = true
         # type of search engine ("lunr", "algolia", "fuse")
-        type = "algolia"
+        type = "fuse"
         # max index length of the chunked content
         contentLength = 4000
         # placeholder of the search bar
@@ -137,37 +169,32 @@ enableEmoji = true
         # max number of results length
         maxResultLength = 10
         # snippet length of the result
-        snippetLength = 300
+        snippetLength = 30
         # HTML tag name of the highlight part in results
         highlightTag = "em"
         # whether to use the absolute URL based on the baseURL in search index
         absoluteURL = false
-        [languages.en.params.search.algolia]
-          index = "en_index"
-          appID = "5YGRNRQK1G"
-          searchKey = "0ff6874805de24b84aa1d5ebccad56cd"
         [languages.en.params.search.fuse]
           # https://fusejs.io/api/options.html
           isCaseSensitive = false
           minMatchCharLength = 2
           findAllMatches = false
           location = 0
-          threshold = 0.1
+          threshold = 0.3
           distance = 100
-          ignoreLocation = true
+          ignoreLocation = false
           useExtendedSearch = false
           ignoreFieldNorm = false
       # Home page config
       [languages.en.params.home]
         # amount of RSS pages
-        rss = 10
+        rss = 15
+
         # Home page profile
         [languages.en.params.home.profile]
           enable = true
-          # Gravatar Email for preferred avatar in home page
-          gravatarEmail = ""
           # URL of avatar shown in home page
-          avatarURL = "/images/avatar.webp"
+          avatarURL = "/various/my-photo.png"
           # title shown in home page (HTML format is supported)
           title = ""
           # subtitle shown in home page
@@ -180,16 +207,17 @@ enableEmoji = true
           disclaimer = ""
         # Home page posts
         [languages.en.params.home.posts]
-          enable = true
+          # enable = false
           # special amount of posts in each home posts page
-          paginate = 5
+          # paginate = 5
       # Social config in home page
       [languages.en.params.social]
         GitHub = "gerdanfs"
-        Youtubechannel = "gerdanfs"
         Twitter = "gerdanfs"
+        Medium = "@gerdanfs"
+        #Youtubechannel = "gerdanfs"
+        BuyMeACoffee = "gerdanfs"
         Email = "gerdanfs@gmail.com"
-        Medium = ""
         Devto = ""
         Gitlab = ""
         Bitbucket = ""
@@ -211,7 +239,6 @@ enableEmoji = true
         Twitch = ""
         Googlescholar = ""
         Ko-Fi = ""
-        BuyMeACoffee = ""
         Whatsapp = ""
         Instagram = ""
         Facebook = ""
@@ -249,24 +276,16 @@ enableEmoji = true
         QQGroup = ""
         Liberapay = ""
         Linktree = ""
-        Youtubelegacy = ""
-        Youtubecustom = ""
         Keybase = ""
         Weibo = ""
         Odnoklassniki = "" 
         RSS = true
-        #[languages.en.params.social.Mastodon]
-          #id = "@xxxx"
-          #prefix = "https://mastodon.technology/"
-        #[languages.en.params.social.Diaspora]
-          #id = "@xxxx"
-          #prefix = "https://yyyy/"
       # Sponsor config
       [languages.en.params.sponsor]
-        enable = false
+        enable = true
         bio = "If you find this post helpful, please consider sponsoring."
-        link = "https://github.com/sponsors/gerdanfs"
-        # custom = "<a href=\"https://www.buymeacoffee.com/gerdanfs\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
+        # link = "https://github.com/sponsors/gerdanfs"
+        custom = "<a href=\"https://www.buymeacoffee.com/gerdanfs\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
 
   [languages.tr]
       weight = 2
@@ -274,12 +293,10 @@ enableEmoji = true
       languageCode = "tr"
       # language name
       languageName = "Türkçe"
-      # whether to include Chinese/Japanese/Korean
-      hasCJKLanguage = false
       # default amount of posts in each pages
       paginate = 12
       # [UA-XXXXXXXX-X] google analytics code
-      googleAnalytics = ""
+      googleAnalytics = "UA-217779143-1"
       # copyright description used only for seo schema
       copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
       # Menu config
@@ -290,67 +307,83 @@ enableEmoji = true
           pre = ""
           # you can add extra information after the name (HTML format is supported), such as icons
           post = ""
-          name = "Yazılar"
+          name = "Yazı"
           url = "/posts/"
           # title will be shown when you hover on this menu link.
           title = ""
           weight = 1
         [[languages.tr.menu.main]]
-          identifier = "tags"
-          pre = ""
-          post = ""
-          name = "Etiketler"
-          url = "/tags/"
-          title = ""
-          weight = 2
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Etiket"
+        url = "/tags/"
+        title = ""
+        weight = 2
         [[languages.tr.menu.main]]
           identifier = "categories"
           pre = ""
           post = ""
-          name = "Kategoriler"
+          name = "Kategori"
           url = "/categories/"
           title = ""
           weight = 3
         [[languages.tr.menu.main]]
-          identifier = "series"
+          identifier = "fields"
           pre = ""
           post = ""
-          name = "Seriler"
-          url = "/series/"
+          name = "Alan"
+          url = "/fields/"
           title = ""
           weight = 4
         [[languages.tr.menu.main]]
-          identifier = "authors"
+          identifier = "series"
           pre = ""
           post = ""
-          name = "Yazarlar"
-          url = "/authors/"
+          name = "Seri"
+          url = "/series/"
           title = ""
           weight = 5
         [[languages.tr.menu.main]]
-          identifier = "showcase"
-          pre = ""
+          identifier = "training"
+          pre = "⭐"
           post = ""
-          name = "Vitrin"
-          url = "/showcase/"
+          name = "Alıştırma"
+          url = "/training/"
           title = ""
           weight = 6
         [[languages.tr.menu.main]]
-          identifier = "documentation"
-          pre = ""
+          identifier = "reviews"
+          pre = "🔎"
           post = ""
-          name = "Dokümantasyon"
-          url = "/categories/documentation/"
+          name = "İnceleme"
+          url = "/reviews/"
           title = ""
           weight = 7
+        #[[languages.tr.menu.main]]
+          #identifier = "paid_content"
+          #pre = "💲"
+          #post = ""
+          #name = "Ücretli"
+          #url = "/paid-content/"
+          #title = ""
+          #weight = 8
+        [[languages.tr.menu.main]]
+          identifier = "etc"
+          pre = "🤪"
+          post = ""
+          name = "vs."
+          url = "/etc/"
+          title = ""
+          weight = 9
         [[languages.tr.menu.main]]
           identifier = "about"
           pre = ""
           post = ""
-          name = "Hakkımda"
+          name = "Hakkında"
           url = "/about/"
           title = ""
-          weight = 8
+          weight = 10
         [[languages.tr.menu.main]]
           identifier = "github"
           pre = "<i class='fab fa-github fa-fw'></i>"
@@ -358,12 +391,33 @@ enableEmoji = true
           name = ""
           url = "https://github.com/gerdanfs"
           title = "GitHub"
-          weight = 9
+          weight = 11
+        [[languages.tr.menu.main]]
+          identifier = "twitter"
+          pre = "<i class='fab fa-twitter fa-fw'></i>"
+          post = ""
+          name = ""
+          url = "https://twitter.com/gerdanfs"
+          title = "Twitter"
+          weight = 12
+        #[[languages.tr.menu.main]]
+          #identifier = "youtube"
+          #pre = "<i class='fab fa-youtube fa-fw'></i>"
+          #post = ""
+          #name = ""
+          #url = "https://www.youtube.com/channel/gerdanfs"
+          #title = "Youtube"
+          #weight = 12
+        
       [languages.tr.params]
         # site description
         description = "Programlama (python), veri bilimi, makine öğrenmesi, felsefe ve sosyoloji üzerine ilginç, derinlemesine yazılar içeren bir blog. Gelin beraber büyüyelim!"
         # site keywords
-        keywords = ["Programlama", "Python", "Veri Bilimi", "Makine Öğrenmesi", "Felsefe", "Sosyoloji", "Kitap İncelemeleri", "Statik Siteler", "Hugo"]
+        keywords = ["Programlama", "Python", "Veri Bilimi", "Makine Öğrenmesi", "Felsefe", "Sosyoloji", "Kitap İncelemeleri", "Film İncelemeleri", "Statik Siteler", "Hugo"]
+        # titles
+        blogPostsTitle = "Buradaki Bütün Yazılar"
+        mediumPostsTitle = "Medium'daki Yazılarım"
+        langSuffix = "tr"
         # App icon config
         [languages.tr.params.app]
           # optional site title override for the app when added to an iOS home screen or Android launcher
@@ -380,7 +434,7 @@ enableEmoji = true
         [languages.tr.params.search]
           enable = true
           # type of search engine ("lunr", "algolia", "fuse")
-          type = "algolia"
+          type = "fuse"
           # max index length of the chunked content
           contentLength = 4000
           # placeholder of the search bar
@@ -388,37 +442,31 @@ enableEmoji = true
           # max number of results length
           maxResultLength = 10
           # snippet length of the result
-          snippetLength = 300
+          snippetLength = 30
           # HTML tag name of the highlight part in results
           highlightTag = "em"
           # whether to use the absolute URL based on the baseURL in search index
           absoluteURL = false
-          [languages.tr.params.search.algolia]
-            index = "tr_index"
-            appID = "5YGRNRQK1G"
-            searchKey = "0ff6874805de24b84aa1d5ebccad56cd"
           [languages.tr.params.search.fuse]
             # https://fusejs.io/api/options.html
             isCaseSensitive = false
             minMatchCharLength = 2
             findAllMatches = false
             location = 0
-            threshold = 0.1
+            threshold = 0.3
             distance = 100
-            ignoreLocation = true
+            ignoreLocation = false
             useExtendedSearch = false
             ignoreFieldNorm = false
         # Home page config
         [languages.tr.params.home]
           # amount of RSS pages
-          rss = 10
+          rss = 15
           # Home page profile
           [languages.tr.params.home.profile]
             enable = true
-            # Gravatar Email for preferred avatar in home page
-            gravatarEmail = ""
             # URL of avatar shown in home page
-            avatarURL = "/images/avatar.webp"
+            avatarURL = "/various/my-photo.png"
             # title shown in home page (HTML format is supported)
             title = ""
             # subtitle shown in home page
@@ -437,88 +485,18 @@ enableEmoji = true
         # Social config in home page
         [languages.tr.params.social]
           GitHub = "gerdanfs"
-          Linkedin = ""
           Twitter = "gerdanfs"
-          Instagram = ""
-          Facebook = ""
-          Telegram = ""
-          Medium = ""
-          Gitlab = ""
-          Youtubelegacy = ""
-          Youtubecustom = ""
-          Youtubechannel = "gerdanfs"
-          Tumblr = ""
-          Quora = ""
-          Keybase = ""
-          Pinterest = ""
-          Reddit = ""
-          Codepen = ""
-          FreeCodeCamp = ""
-          Bitbucket = ""
-          Stackoverflow = ""
-          Weibo = ""
-          Odnoklassniki = ""
-          VK = ""
-          Flickr = ""
-          Xing = ""
-          Snapchat = ""
-          Soundcloud = ""
-          Spotify = ""
-          Bandcamp = ""
-          Paypal = ""
-          Fivehundredpx = ""
-          Mix = ""
-          Goodreads = ""
-          Lastfm = ""
-          Foursquare = ""
-          Hackernews = ""
-          Kickstarter = ""
-          Patreon = ""
-          Steam = ""
-          Twitch = ""
-          Strava = ""
-          Skype = ""
-          Whatsapp = ""
-          Zhihu = ""
-          Douban = ""
-          Angellist = ""
-          Slidershare = ""
-          Jsfiddle = ""
-          Deviantart = ""
-          Behance = ""
-          Dribbble = ""
-          Wordpress = ""
-          Vine = ""
-          Googlescholar = ""
-          Researchgate = ""
-          Thingiverse = ""
-          Devto = ""
-          Gitea = ""
-          XMPP = ""
-          Matrix = ""
-          Bilibili = ""
-          ORCID = ""
-          QQ = ""
-          QQGroup = ""
-          Liberapay = ""
-          Ko-Fi = ""
-          BuyMeACoffee = ""
-          Linktree = ""
+          Medium = "@gerdanfs"
+          #Youtubechannel = "gerdanfs"
+          BuyMeACoffee = "gerdanfs"
           Email = "gerdanfs@gmail.com"
           RSS = true
-          #[languages.tr.params.social.Mastodon]
-            #id = "@xxxx"
-            #prefix = "https://mastodon.technology/"
-          #[languages.tr.params.social.Diaspora]
-            #id = "@xxxx"
-            #prefix = "https://yyyy/"
         # Sponsor config
         [languages.tr.params.sponsor]
-          enable = false
-          bio = "If you find this post helpful, please consider sponsoring."
-          link = "https://github.com/sponsors/gerdanfs"
+          enable = true
+          bio = "Bu yazıyı faydalı bulduysanız, sponsor olup bana destek olabilirsiniz."
+          # link = "https://github.com/sponsors/gerdanfs"
           custom = "<a href=\"https://www.buymeacoffee.com/gerdanfs\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
-  
 
 [params]
   # website title
@@ -526,21 +504,21 @@ enableEmoji = true
   # DoIt theme version
   version = "0.2.X"
   # site default theme ("light", "dark", "black", "auto")
-  defaultTheme = "auto"
+  defaultTheme = "light"
   # public git repo url only then enableGitInfo is true
-  gitRepo = "https://github.com/gerdanfs"
+  gitRepo = "https://github.com/gerdanfs/gerdanfs.github.io"
   # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
   # date format
   dateFormat = "2006-01-02"
   # website images for Open Graph and Twitter Cards
-  images = ["/images/avatar.webp"]
+  images = ["/various/my-photo.png"]
   # enable PWA
-  enablePWA = true
+  # enablePWA = true
   # license information
   license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
   # [Experimental] Bundle js
-  bundle = true
+  # bundle = true
   # Header config
   [params.header]
     # desktop header mode ("fixed", "normal", "auto")
@@ -556,30 +534,30 @@ enableEmoji = true
       # title name
       name = "FSG"
       # you can add extra information before the name (HTML format is supported), such as icons
-      pre = "😃"                       # "<i class='far fa-edit fa-fw'></i>"
+      pre = "🏠"                       # "<i class='far fa-edit fa-fw'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       # whether to use typeit animation for title name
-      typeit = true
+      # typeit = true
 
   # Footer config
   [params.footer]
     enable = true
     # Custom content (HTML format is supported)
-    custom = ''
+    custom = ""
     # whether to show Hugo and theme info
     hugo = true
     # Hosted on (HTML format is supported)
     # <a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a>
-    hostedOn = '' 
+    hostedOn = '<a title="Github Pages" href="https://docs.github.com/en/pages/" target="_blank" rel="noopener noreffer">GitHub Pages</a>' 
     # whether to show copyright info
     copyright = true
     # whether to show the author
     author = true
     # site creation time
-    since = 2019
+    since = 2022
     # ICP info only in China (HTML format is supported)
-    icp = ""
+    # icp = ""
     # license info (HTML format is supported)
     license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
 
@@ -588,9 +566,9 @@ enableEmoji = true
     # special amount of posts in each section page
     paginate = 20
     # date format (month and day)
-    dateFormat = "01-02"
+    dateFormat = "01-02" #"Monday, Jan 2, 2006"
     # amount of RSS pages
-    rss = 10
+    rss = 15
     # recently updated posts settings
     [params.section.recentlyUpdated]
       enable = true
@@ -605,7 +583,7 @@ enableEmoji = true
     # date format (month and day)
     dateFormat = "01-02"
     # amount of RSS pages
-    rss = 10
+    rss = 15
 
   # Page config
   [params.page]
@@ -626,49 +604,39 @@ enableEmoji = true
     # whether to show link to Raw Markdown content of the content
     linkToMarkdown = true
     # configure the link to view source the post
-    linkToSource = "https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}"
+    # linkToSource = "https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}"
     # "https://github.com/user/repo/blob/main/{path}"
     # configure the link to edit the post
-    linkToEdit = "https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/{path}"
+    # linkToEdit = "https://github.com/HEIGE-PCloud/DoIt/edit/main/exampleSite/content/{path}"
     # https://github.com/user/repo/edit/main/{path}
     # https://gitlab.com/user/repo/-/edit/main/{path}
     # https://bitbucket.org/user/repo/src/main/{path}?mode=edit
     # configure the link to report issue for the post
-    linkToReport = "https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}|"
+    # linkToReport = "https://github.com/HEIGE-PCloud/DoIt/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/HEIGE-PCloud/DoIt/blob/main/exampleSite/content/{path}|"
     # https://github.com/user/repo/issues/new?title=[bug]%20{title}&body=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://github.com/user/repo/blob/main/{path}|"
     # https://gitlab.com/user/repo/-/issues/new?issue[title]=[bug]%20{title}&issue[description]=|Field|Value|%0A|-|-|%0A|Title|{title}|%0A|Url|{url}|%0A|Filename|https://gitlab.com/user/repo/-/edit/main/{path}|
     # whether to show the full text content in RSS
     rssFullText = false
     # Page style ("normal", "wide")
-    # 页面样式 ("normal", "wide")
-    pageStyle = "normal"
+    pageStyle = "wide"
     # whether to enable series navigation
-    # 是否使用系列导航
     seriesNavigation = true
     # Display a message at the beginning of an article to warn the reader that its content might be outdated.
-    # 在文章开头显示提示信息，提醒读者文章内容可能过时。
     [params.page.outdatedArticleReminder]
       enable = true
       # Display the reminder if the last modified time is more than 90 days ago.
-      # 如果文章最后更新于这天数之前，显示提醒
-      reminder = 90
+      reminder = 365
       # Display warning if the last modified time is more than 180 days ago.
-      # 如果文章最后更新于这天数之前，显示警告
-      warning = 180
+      warning = 750
     # Table of the contents config
-    # 目录配置
     [params.page.toc]
       # whether to enable the table of the contents
-      # 是否使用目录
       enable = true
       # whether to keep the static table of the contents in front of the post
-      # 是否保持使用文章前面的静态目录
       keepStatic = false
       # whether to make the table of the contents in the sidebar automatically collapsed
-      # 是否使侧边目录自动折叠展开
       auto = true
     # Code config
-    # 代码配置
     [params.page.code]
       # whether to show the copy button of the code block
       copy = true
@@ -694,44 +662,38 @@ enableEmoji = true
     # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS
-      accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
+      # accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
       # style for the light theme
-      lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
+      # lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
       # style for the dark theme
-      # 深色主题的地图样式
-      darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
+      # darkStyle = "mapbox://styles/mapbox/dark-v10?optimize=true"
       # whether to add NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-      # 是否添加 NavigationControl (https://docs.mapbox.com/mapbox-gl-js/api/#navigationcontrol)
-      navigation = true
+      # navigation = true
       # whether to add GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-      # 是否添加 GeolocateControl (https://docs.mapbox.com/mapbox-gl-js/api/#geolocatecontrol)
-      geolocate = true
+      # geolocate = true
       # whether to add ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-      # 是否添加 ScaleControl (https://docs.mapbox.com/mapbox-gl-js/api/#scalecontrol)
-      scale = true
+      # scale = true
       # whether to add FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-      # 是否添加 FullscreenControl (https://docs.mapbox.com/mapbox-gl-js/api/#fullscreencontrol)
-      fullscreen = true
+      # fullscreen = true
     # Social share links in post page
-    # 文章页面的分享信息设置
     [params.page.share]
       enable = true
       Twitter = true
+      Reddit = true
       Facebook = true
-      Linkedin = false
-      Whatsapp = false
-      Pinterest = false
-      Tumblr = false
+      Linkedin = true
+      Whatsapp = true
+      Pinterest = true
       HackerNews = true
-      Reddit = false
-      VK = false
+      Tumblr = true
+      VK = true
       Buffer = false
       Xing = false
       Line = true
       Instapaper = false
-      Pocket = false
+      Pocket = true
       Digg = false
-      Stumbleupon = false
+      Stumbleupon = true
       Flipboard = false
       Weibo = true
       Renren = false
@@ -739,201 +701,70 @@ enableEmoji = true
       Blogger = false
       Baidu = false
       Odnoklassniki = false
-      Evernote = false
+      Evernote = true
       Skype = false
-      Trello = false
+      Trello = true
       Mix = false
       Telegram = true
     # Comment config
-    # 评论系统设置
     [params.page.comment]
       enable = true
-      # Disqus comment config (https://disqus.com/)
-      # Disqus 评论系统设置 (https://disqus.com/)
-      [params.page.comment.disqus]
-        enable = false
-        # Disqus shortname to use Disqus in posts
-        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
-        shortname = ""
-      # Gitalk comment config (https://github.com/gitalk/gitalk)
-      # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
-      [params.page.comment.gitalk]
-        enable = false
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # Valine comment config (https://github.com/xCss/Valine)
-      # Valine 评论系统设置 (https://github.com/xCss/Valine)
-      [params.page.comment.valine]
-        enable = false
-        appId = "aM7gLUeWp8it1Efrcp3rm8TB-MdYXbMMI"
-        appKey = "Xn1xlYj3Fm5gvsYG3WyQpaix"
-        placeholder = ""
-        avatar = "mp"
-        meta= ""
-        pageSize = 10
-        lang = "en"
-        visitor = true
-        recordIP = false
-        highlight = true
-        enableQQ = false
-        serverURLs = ""
-        # emoji data file name, default is "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # located in "themes/DoIt/assets/data/emoji/" directory
-        # you can store your own data files in the same path under your project:
-        # "assets/data/emoji/"
-        # emoji 数据文件名称, 默认是 "google.yml"
-        # ("apple.yml", "google.yml", "facebook.yml", "twitter.yml")
-        # 位于 "themes/DoIt/assets/data/emoji/" 目录
-        # 可以在你的项目下相同路径存放你自己的数据文件:
-        # "assets/data/emoji/"
-        emoji = ""
-      # Waline comment config (https://waline.js.org)
-      # Waline 评论系统设置 (https://waline.js.org)
-      [params.page.comment.waline]
-        enable = false
-        serverURL = ""
-        visitor = false
-        emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
-        meta = ['nick', 'mail', 'link']
-        requiredMeta = []
-        login = 'enable'
-        wordLimit = 0
-        pageSize = 10
-        uploadImage = false
-        highlight = true
-        mathTagSupport = false
-        commentCount = false
-      # Facebook comment config (https://developers.facebook.com/docs/plugins/comments)
-      # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
-      [params.page.comment.facebook]
-        enable = false
-        width = "100%"
-        numPosts = 10
-        appId = ""
-        languageCode = ""
-      # Telegram comments config (https://comments.app/)
-      # Telegram comments 评论系统设置 (https://comments.app/)
-      [params.page.comment.telegram]
-        enable = false
-        siteID = ""
-        limit = 5
-        height = ""
-        color = ""
-        colorful = true
-        dislikes = false
-        outlined = false
-        dark = false
-      # Commento comment config (https://commento.io/)
-      # Commento comment 评论系统设置 (https://commento.io/)
-      [params.page.comment.commento]
-        enable = false
-      # Utterances comment config (https://utteranc.es/)
-      # Utterances comment 评论系统设置 (https://utteranc.es/)
-      [params.page.comment.utterances]
-        enable = false
-        # owner/repo
-        repo = ""
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-      # Twikoo comment config (https://twikoo.js.org/)
-      # Twikoo comment 评论系统设置 (https://twikoo.js.org/)
-      [params.page.comment.twikoo]
-        enable = true
-        envId = "https://doit-docs-comment-twikoo.vercel.app/"
-        region = ""
-        path = ""
-        visitor = true
-        commentCount = true
-      # Vssue comment config (https://vssue.js.org//)
-      # Vssue comment 评论系统设置 (https://vssue.js.org//)
-      [params.page.comment.vssue]
-        enable = false
-        platform = "" # ("bitbucket", "gitea", "gitee", "github", "gitlab")
-        owner = ""
-        repo = ""
-        clientId = ""
-        clientSecret = ""
-      # Remark42 comment config (https://remark42.com/)
-      # Remark42 comment 评论系统设置 (https://remark42.com/)
-      [params.page.comment.remark42]
-        enable = false
-        host = ""
-        site_id = ""
-        max_shown_comments = 15
-        show_email_subscription = true
-        simple_view = false
       # giscus comment config (https://giscus.app/)
-      # giscus comment 评论系统设置 (https://giscus.app/)
       [params.page.comment.giscus]
-        enable = false
+        enable = true
         # owner/repo
-        dataRepo = ""
-        dataRepoId = ""
-        dataCategory = ""
-        dataCategoryId = ""
-        dataMapping = "pathname"
-        dataReactionsEnabled = "1"
-        dataEmitMetadata = "0"
-        lightTheme = "light"
-        darkTheme = "dark"
+        data-repo="gerdanfs/gerdanfs.github.io"
+        data-repo-id="R_kgDOGptkgQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOGptkgc4CAyA2"
+        data-mapping="pathname"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-theme="light_protanopia"
+        data-lang="en"
+        crossorigin="anonymous"
     # Third-party library config
-    # 第三方库配置
     [params.page.library]
       [params.page.library.css]
         # someCSS = "some.css"
-        # located in "assets/" 位于 "assets/"
-        # Or 或者
+        # located in "assets/"
+        # Or
         # someCSS = "https://cdn.example.com/some.css"
       [params.page.library.js]
         # someJavascript = "some.js"
-        # located in "assets/" 位于 "assets/"
-        # Or 或者
+        # located in "assets/"
+        # Or
         # someJavascript = "https://cdn.example.com/some.js"
     # Page SEO config
-    # 页面 SEO 配置
     [params.page.seo]
       # image URL
-      # 图片 URL
       images = []
       # Publisher info
-      # 出版者信息
       [params.page.seo.publisher]
-        name = "xxxx"
-        logoUrl = "/images/avatar.webp"
+        name = ""
+        logoUrl = ""
 
   # Sponsor config
-  # 赞助设置
   [params.sponsor]
-    enable = false
+    enable = true
     bio = "If you find this post helpful, please consider sponsoring."
-    link = "https://github.com/sponsors/HEIGE-PCloud"
-    # custom = "<a href=\"https://www.buymeacoffee.com/PCloud\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
+    # link = "https://github.com/sponsors/gerdanfs"
+    custom = "<a href=\"https://www.buymeacoffee.com/gerdanfs\" target=\"_blank\"><img src=\"https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png\" alt=\"Buy Me A Coffee\" style=\"height: 40px !important;width: 145 !important;\" ></a>"
 
   # TypeIt config
-  # TypeIt 配置
   [params.typeit]
     # typing speed between each step (measured in milliseconds)
-    # 每一步的打字速度 (单位是毫秒)
     speed = 100
     # blinking speed of the cursor (measured in milliseconds)
-    # 光标的闪烁速度 (单位是毫秒)
     cursorSpeed = 1000
     # character used for the cursor (HTML format is supported)
-    # 光标的字符 (支持 HTML 格式)
     cursorChar = "|"
     # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-    # 打字结束之后光标的持续时间 (单位是毫秒, "-1" 代表无限大)
     duration = -1
 
   # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
-  # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
   [params.verification]
-    google = "MQ8DNu27ayX6B_4ObiEDK09vGr1fdy7kOAnbd09hJk4"
+    google = ""
     bing = ""
     yandex = ""
     pinterest = ""
@@ -942,98 +773,62 @@ enableEmoji = true
     sogou = ""
 
   # Site SEO config
-  # 网站 SEO 配置
   [params.seo]
     # image URL
-    # 图片 URL
     image = "/images/Apple-Devices-Preview.png"
     # thumbnail URL
-    # 缩略图 URL
     thumbnailUrl = "/images/screenshot.png"
 
   # Analytics config
-  # 网站分析配置
   [params.analytics]
-    enable = false
+    enable = true
     # Google Analytics
     [params.analytics.google]
       id = ""
       # whether to anonymize IP
-      # 是否匿名化用户 IP
       anonymizeIP = true
-    # Fathom Analytics
-    [params.analytics.fathom]
-      id = ""
-      # server url for your tracker if you're self hosting
-      # 自行托管追踪器时的主机路径
-      server = ""
-    # Baidu Analytics
-    [params.analytics.baidu]
-      id = ""
     # Umami Analytics
     [params.analytics.umami]
       data_website_id = ""
       src = ""
       data_domains = ""
-    # Plausible Analytics
-    [params.analytics.plausible]
-      data_domain = ""
-      src = ""
-    # Cloudflare Analytics
-    [params.analytics.cloudflare]
-      token = ""
 
   # Cookie consent config
-  # Cookie 许可配置
   [params.cookieconsent]
     enable = false
     # text strings used for Cookie consent banner
-    # 用于 Cookie 许可横幅的文本字符串
     [params.cookieconsent.content]
       message = ""
       dismiss = ""
       link = ""
 
   # CDN config for third-party library files
-  # 第三方库文件的 CDN 设置
   [params.cdn]
     # CDN data file name, disabled by default
     # ("jsdelivr.yml")
     # located in "themes/DoIt/assets/data/cdn/" directory
     # you can store your own data files in the same path under your project:
     # "assets/data/cdn/"
-    # CDN 数据文件名称, 默认不启用
-    # ("jsdelivr.yml")
-    # 位于 "themes/DoIt/assets/data/cdn/" 目录
-    # 可以在你的项目下相同路径存放你自己的数据文件:
-    # "assets/data/cdn/"
     data = ""
 
   # Compatibility config
-  # 兼容性设置
   [params.compatibility]
     # whether to use Polyfill.io to be compatible with older browsers
-    # 是否使用 Polyfill.io 来兼容旧式浏览器
     polyfill = false
     # whether to use object-fit-images to be compatible with older browsers
-    # 是否使用 object-fit-images 来兼容旧式浏览器
     objectFit = false
 
 # Markup related configuration in Hugo
-# Hugo 解析文档的配置
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
     codeFences = true
     guessSyntax = true
     lineNos = true
     lineNumbersInTable = true
     # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
-    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
   # Goldmark is from Hugo 0.60 the default library used for Markdown
-  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
   [markup.goldmark]
     [markup.goldmark.extensions]
       definitionList = true
@@ -1045,21 +840,18 @@ enableEmoji = true
       typographer = true
     [markup.goldmark.renderer]
       # whether to use HTML tags directly in the document
-      # 是否在文档中直接使用 HTML 标签
       unsafe = true
   # Table Of Contents settings
-  # 目录设置
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 6
 
 # Author config
 [author]
-  name = "FSG"
+  name = "Fatih Serhat Gerdan"
   email = "gerdanfs.gmail.com"
-  link = "https://github.com/gerdanfs"
-  avatar = "/images/avatar.webp"
-  gravatarEmail = ""
+  #link = "https://github.com/gerdanfs"
+  avatar = "/various/my-photo.png"
 
 # Sitemap config
 [sitemap]
@@ -1071,11 +863,11 @@ enableEmoji = true
 [Permalinks]
   # posts = ":year/:month/:filename"
   posts = ":filename"
+  # about = ":filename"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 [privacy]
   # privacy of the Google Analytics (replaced by params.analytics.google)
-  # Google Analytics 相关隐私 (被 params.analytics.google 替代)
   [privacy.googleAnalytics]
     # ...
   [privacy.twitter]
@@ -1084,7 +876,6 @@ enableEmoji = true
     privacyEnhanced = true
 
 # Options to make output .md files
-# 用于输出 Markdown 格式文档的设置
 [mediaTypes]
   [mediaTypes."text/plain"]
     suffixes = ["md"]
@@ -1109,10 +900,11 @@ author = "authors"
 category = "categories"
 tag = "tags"
 series = "series"
+field = "fields"
 
 ##########################################
 # FSG: My custom variables and parameters
 [params.fsg]
-  enableCustomDebugger = true
+  enableCustomDebugger = false
 
 ##########################################

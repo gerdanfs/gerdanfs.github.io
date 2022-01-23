@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Fatih Serhat Gerdan</title>
+    <link>http://gerdanfs.github.io/about/</link>
+    <description>Recent content in About on Fatih Serhat Gerdan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+    <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 14 Jan 2022 00:12:42 +0300</lastBuildDate><atom:link href="http://gerdanfs.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>http://gerdanfs.github.io/about/about-me/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/about/about-me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About the Site</title>
+      <link>http://gerdanfs.github.io/about/about-site/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/about/about-site/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>Concise List of Personal Values</title>
+      <link>http://gerdanfs.github.io/about/concise-list-of-personal-values/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/about/concise-list-of-personal-values/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>Uses</title>
+      <link>http://gerdanfs.github.io/about/uses/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/about/uses/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>What am I doing now?</title>
+      <link>http://gerdanfs.github.io/now/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/now/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>http://gerdanfs.github.io/about/credits/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/about/credits/</guid>
+      <description>Photo Credits Photo by mohamed Hassan on Pixabay  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,4 +1,33 @@
 // ==============================
 // Override Variables
-// 覆盖变量
 // ==============================
+
+// ========== Global ========== //
+// Font and Line Height
+// $global-font-family: system-ui, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei UI, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif !default;
+$global-font-size: 18px;
+$global-font-weight: 400;
+$global-line-height: 1.5rem;
+
+// Color of the background
+$global-background-color: rgb(247, 251, 249);
+
+// ========== Header ========== //
+// Color of the header background
+$header-background-color: #a3e4ba;
+
+// Font style of the header title
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+$header-title-font-family: 'Bungee Shade', cursive;
+$header-title-font-size: 1.7rem;
+
+// Color of the hover header item
+$header-hover-color: #ad1b47;
+
+// Color of the search background
+$search-background-color: #f9fad3;
+
+// Height of the header
+$header-height: 3.5rem ;
+
+// ========== Header ========== //

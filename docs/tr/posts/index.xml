@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Bütün Yazılar - Fatih Serhat Gerdan</title>
+        <link>http://gerdanfs.github.io/tr/posts/</link>
+        <description>Bütün Yazılar | Fatih Serhat Gerdan</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+            <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Jan 2022 01:52:05 &#43;0300</lastBuildDate><atom:link href="http://gerdanfs.github.io/tr/posts/" rel="self" type="application/rss+xml" /></channel>
+</rss>

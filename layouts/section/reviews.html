@@ -1,0 +1,124 @@
+{{- define "title" }}
+    {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page archive" style="padding-bottom: 5em; padding-top: 3.0em;">
+        <style>
+          h1 {
+            color: #444;
+          }
+          
+           .btn {
+              padding: 1em 2.1em 1.1em;
+              border-radius: 3px;
+              margin: 8px 8px 8px 8px;
+              color: #fbdedb;
+              background-color: #fbdedb;
+              display: inline-block;
+              background: #e74c3c;
+              -webkit-transition: 0.3s;
+              -moz-transition: 0.3s;
+              -o-transition: 0.3s;
+              transition: 0.3s;
+              font-family: sans-serif;
+              font-weight: 800;
+              font-size: .85em;
+              text-align: center;
+              text-decoration: none;
+              -webkit-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+              -moz-box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+              box-shadow: 0em -0.3rem 0em rgba(0, 0, 0, 0.1) inset;
+              position: relative;
+          }
+          .btn:hover, .btn:focus {
+              opacity: 0.8;
+          }
+          .btn:active {
+              -webkit-transform: scale(0.80);
+              -moz-transform: scale(0.80);
+              -ms-transform: scale(0.80);
+              -o-transform: scale(0.80);
+              transform: scale(0.80);
+          }
+          .btn.block {
+              display: block !important;
+          }
+          .btn.circular {
+            border-radius: 50em !important;
+          }
+          
+          
+          /* Colours */
+          .red {
+              background-color: #d55050;
+          }
+          .teal {
+              background-color: #50d5a1;
+          }
+          .sky {
+              background-color: #6698cb;
+          }
+          .black {
+              background-color: #5c6166;
+          }
+          .gray {
+              color: black;
+              background-color: #d2d2d2;
+          }
+          .orange {
+              background-color: #e96633;
+          }
+          .pink {
+              background-color: #cb99c5;
+          }
+          .green {
+              background-color: #5bbd72;
+          }
+          .blue {
+              background-color: #7abedf;
+          }
+          .yellow {
+              background-color: #ecc92b;
+          }
+          .purple {
+              background-color: #564f8a;
+          }
+        </style>
+        <hr>
+           <span> <strong>{{ i18n "note" }}</strong>: <span style="color: darkred;">{{ i18n "underConstruction" }}</span>
+           <br>
+            {{ i18n "revMessage" }} <i class="fas fa-adjust fa-fw"></i></span> 
+        <hr>
+        <h1>{{ i18n "bookReviews" }}</h1>
+        <hr>
+
+        <a href="{{ .Site.LanguagePrefix }}/reviews/book-reviews-fiction/" class="btn red circular">{{ i18n "fiction" }}</a>
+        <a href="{{ .Site.LanguagePrefix }}/reviews/book-reviews-non-fiction/" class="btn purple circular">{{ i18n "nonFiction" }}</a>
+        <a href="#fakeLink" class="btn orange circular">{{ i18n "programming" }}</a>
+        <a href="#fakeLink" class="btn blue circular" style="color: chocolate;">{{ i18n "philosophy" }}</a>
+        
+       
+
+        <hr>
+        <h1>{{ i18n "visualMediaReviews" }}</h1>
+        <hr>
+        <a href="#fakeLink" class="btn teal circular">{{ i18n "movies" }}</a>
+        <a href="#fakeLink" class="btn circular">{{ i18n "documentaries" }}</a>
+        <a href="#fakeLink" class="btn green circular">{{ i18n "tv" }}</a>
+        <a href="#fakeLink" class="btn yellow circular">{{ i18n "shortFilms" }}</a>
+
+        <hr>
+        <h1>{{ i18n "musicReviews" }}</h1>
+        <hr>
+        <a href="#fakeLink" class="btn black circular">{{ i18n "variousAlbums" }}</a>
+        <a href="#fakeLink" class="btn gray circular" style="color: chocolate;">{{ i18n "progRock" }}</a>
+
+        <hr>
+        <h1>{{ i18n "otherReviews" }}</h1>
+        <hr>
+        <a href="#fakeLink" class="btn sky circular">{{ i18n "apps" }}</a>
+        <a href="#fakeLink" class="btn pink circular">{{ i18n "games" }}</a>
+        
+    </div>
+{{- end -}}

@@ -5,7 +5,8 @@ draft: false
 authors: ["FSG"]
 description: "The first post"
 tags: ["test"]
-categories: ["Test"]
+categories: ["Tests",]
+fields: ["Philosophy", "Programming"]
 ---
 
 The first post for testing purposes.

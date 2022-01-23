@@ -1,0 +1,20 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>test - Tag - Fatih Serhat Gerdan</title>
+        <link>http://gerdanfs.github.io/tags/test/</link>
+        <description>test - Tag - Fatih Serhat Gerdan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+            <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Jan 2022 01:52:05 &#43;0300</lastBuildDate><atom:link href="http://gerdanfs.github.io/tags/test/" rel="self" type="application/rss+xml" /><item>
+    <title>Medium Test Article</title>
+    <link>http://gerdanfs.github.io/medium-test/</link>
+    <pubDate>Tue, 18 Jan 2022 01:52:05 &#43;0300</pubDate><author>
+                    <name>Fatih Serhat Gerdan</name><uri>http://gerdanfs.github.io/authors/fsg</uri><email>gerdanfs@gmail.com</email></author><guid>http://gerdanfs.github.io/medium-test/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Hello World!</title>
+    <link>http://gerdanfs.github.io/hello-world/</link>
+    <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate><author>
+                    <name>Fatih Serhat Gerdan</name><uri>http://gerdanfs.github.io/authors/fsg</uri><email>gerdanfs@gmail.com</email></author><guid>http://gerdanfs.github.io/hello-world/</guid>
+    <description><![CDATA[<p>The first post for testing purposes.</p>]]></description>
+</item></channel>
+</rss>

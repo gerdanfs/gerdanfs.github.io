@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alıştırmalar on Fatih Serhat Gerdan</title>
+    <link>http://gerdanfs.github.io/tr/training/</link>
+    <description>Recent content in Alıştırmalar on Fatih Serhat Gerdan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+    <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Mon, 01 Nov 2021 20:08:29 +0800</lastBuildDate><atom:link href="http://gerdanfs.github.io/tr/training/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Öğren</title>
+      <link>http://gerdanfs.github.io/tr/training/python/</link>
+      <pubDate>Wed, 19 Jan 2022 17:24:04 +0300</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/tr/training/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

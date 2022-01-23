@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Medium - Category - Fatih Serhat Gerdan</title>
+        <link>http://gerdanfs.github.io/categories/medium/</link>
+        <description>Medium - Category - Fatih Serhat Gerdan</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+            <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Jan 2022 01:52:05 &#43;0300</lastBuildDate><atom:link href="http://gerdanfs.github.io/categories/medium/" rel="self" type="application/rss+xml" /><item>
+    <title>Medium Test Article</title>
+    <link>http://gerdanfs.github.io/medium-test/</link>
+    <pubDate>Tue, 18 Jan 2022 01:52:05 &#43;0300</pubDate><author>
+                    <name>Fatih Serhat Gerdan</name><uri>http://gerdanfs.github.io/authors/fsg</uri><email>gerdanfs@gmail.com</email></author><guid>http://gerdanfs.github.io/medium-test/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

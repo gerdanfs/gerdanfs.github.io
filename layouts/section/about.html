@@ -1,0 +1,34 @@
+{{- define "title" }}
+    {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page archive" style="padding-top: 4.0em;">
+        <style>
+            .blogtitle h1{ 
+                padding-left: 4.1em;
+                padding-top: 0.4em;
+                font-size: larger;
+                color:white !important;
+                text-shadow:1px 1px 1px #fff;
+                text-shadow:1px 1px 10px #ddd;
+                font-family: 'Dancing Script', cursive;
+            }
+            .blogtitle h1:hover{
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #28664e, 0 0 30px #28664e, 0 0 40px #28664e, 0 0 55px #28664e, 0 0 75px #28664e;
+                text-decoration:none !important;
+            } 
+        </style>
+
+        {{- range .Pages -}}
+            <div class="blogtitle">
+                <h1>
+                    <a href="{{ .RelPermalink }}" class="archive-item-link">
+                        {{- .Title -}}
+                    </a>
+                </h1>
+            </div>
+        {{- end -}}
+    </div>
+    
+{{- end -}}

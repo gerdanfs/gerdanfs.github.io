@@ -1,0 +1,146 @@
+{{- define "title" }}
+    {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page single special">
+        <style>    
+          @import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
+          h2 {
+            font-family: Mansalva, Arial;
+            text-align: center;
+            line-height: 2rem;
+            color: tomato;
+            text-shadow: 0px 0px 10px white, 0px 0px 30px navajowhite;
+          }
+          p {
+            font-size: 1rem;
+            padding: 0 20%;
+          }
+
+          span {
+            text-align: center;
+          }
+
+          /* gallery specific CSS */
+
+          .-fx-image-gal {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%; /* arbitrary valye */
+            margin: 0px auto;
+            text-align: center;
+          }
+          .-fx-gal-item {
+            width: 18%; /* for 5 columns */
+            margin: 5px;
+            overflow: hidden;
+            border-radius: 15px;
+          }
+
+          .-fx-gal-image-thumb img {
+            width: 100%;
+            border-radius: 15px;
+            cursor: pointer;
+            -webkit-filter: grayscale(80%);
+            -moz-filter: grayscale(80%);
+            filter: grayscale(80%);
+            transition: all 0.3s ease;
+          }
+
+          .-fx-gal-image-thumb:hover img {
+            width: 100%;
+            cursor: pointer;
+            -webkit-filter: grayscale(0%);
+            -moz-filter: grayscale(0%);
+            filter: grayscale(0%);
+            transform: scale(1.2);
+            transition: all 0.5s ease;
+          }
+
+          .-fx-gal-image-thumb:focus + .-fx-gal-image-big {
+            display: block;
+          }
+          .review {
+            font-family: Mansalva, Arial;
+            color: tomato;
+            font-size: 30px;
+          }
+
+          .rewiew-tag {
+            font-family: Mansalva, Arial;
+            color: tomato;
+          }
+
+
+        </style>
+        
+        <hr>
+        <h2>{{- .Title -}}</h2>
+        {{- /* {{- partial "clickTheCover.html" . -}} */ -}}
+        <hr>
+        <div class="-fx-image-gal">
+          
+            <div class="-fx-gal-item">
+              <a href="{{ .Site.LanguagePrefix }}/reviews/book-reviews-non-fiction/">
+                <div class="-fx-gal-image-thumb" tabindex="1">
+                  <img src="/book-reviews-non-fiction/anabasis-{{ .Site.Params.langSuffix }}.jpg" />
+                </div>
+              </a>
+              <div class= "review">
+                <span>
+                </span>
+              </div>
+            </div>
+            <div class="-fx-gal-item">
+              <a href="#fakeLink">
+                <div class="-fx-gal-image-thumb" tabindex="1">
+                  <img src="/book-reviews-non-fiction/finland-the-country-of-white-lilies.jpg" />
+                </div>
+              </a>
+              <div class= "review">
+                <span>
+                </span>
+              </div>
+            </div>
+            <div class="-fx-gal-item">
+              <a href="#fakeLink">
+                <div class="-fx-gal-image-thumb" tabindex="1">
+                  <img src="/book-reviews-non-fiction/moonwalking-with-einstein.jpg" />
+                </div>
+              </a>
+              <div class= "review">
+                <span>
+                </span>
+              </div>
+            </div>
+            <div class="-fx-gal-item">
+              <a href="#fakeLink">
+                <div class="-fx-gal-image-thumb" tabindex="1">
+                  <img src="/book-reviews-non-fiction/a-brief-history-of-time.jpg" />
+                </div>
+              </a>
+              <div class= "review">
+                <span>
+                </span>
+              </div>
+            </div>
+            <div class="-fx-gal-item">
+              <a href="#fakeLink">
+                <div class="-fx-gal-image-thumb" tabindex="1">
+                  <img src="/book-reviews-non-fiction/walden.jpg" />
+                </div>
+              </a>
+              <div class= "review">
+                <span>
+                </span>
+              </div>
+            </div>
+        </div>
+        <hr>
+        <h2>Turkish Authors</h2>
+        <hr>
+        <div style="height: 50vh"></div>
+    </div>
+{{- end -}}

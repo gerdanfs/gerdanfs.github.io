@@ -1,0 +1,130 @@
+{{- define "title" }}
+    {{- .Params.Title | default (T .Section) | default .Section | dict "Some" | T "allSome" }} - {{ .Site.Title -}}
+{{- end -}}
+
+{{- define "content" -}}
+    <div class="page archive" style="padding-bottom: 5em; padding-top: 3.0em;">
+        <style>
+            .cards-list {
+                z-index: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
+              }
+              
+              .card {
+                margin: 30px 15px;
+                width: 115px;
+                height: 115px;
+                border-radius: 40px;
+                box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+                cursor: pointer;
+                transition: 0.4s;
+              }
+              
+              .card .card_image {
+                width: inherit;
+                height: inherit;
+                border-radius: 40px;
+              }
+              
+              .card .card_image img {
+                width: inherit;
+                height: inherit;
+                border-radius: 40px;
+                object-fit: cover;
+              }
+              
+              .card .card_title {
+                text-align: center;
+                border-radius: 0px 0px 40px 40px;
+                font-weight: bold;
+                font-size: 30px;
+                margin-top: -80px;
+                height: 40px;
+              }
+              
+              .card:hover {
+                transform: scale(0.9, 0.9);
+                box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+                  -5px -5px 30px 15px rgba(0,0,0,0.22);
+              }
+              
+              .title-white {
+                color: white;
+              }
+              
+              .title-black {
+                color: black;
+              }
+              
+              @media all and (max-width: 500px) {
+                .card-list {
+                  /* On small screens, we are no longer using row direction but column */
+                  flex-direction: column;
+                }
+              }
+
+            p {
+                text-align: center;
+            }
+              
+            h2 {
+                text-align: center;
+                margin: 7px;
+            }
+            
+        </style>
+        <hr>
+        <strong>{{ i18n "note" }}</strong>:
+        <span style="color: darkred;">{{ i18n "underConstruction" }}</span>
+        <hr>
+        <h2>{{ i18n "becomePowerUser" }}</h2>
+        <hr>
+        <div class="cards-list">
+            <a href="{{ .Site.LanguagePrefix }}/training/fundamentals/">
+                <div class="card 1">
+                <div class="card_image"> <img src="/training/computer-fundamentals.jpg" /> </div>
+                <p>{{ i18n "fundamentals" }}</p>
+                </div>
+            </a>
+            <a href="{{ .Site.LanguagePrefix }}/training/git/">
+                <div class="card 1">
+                <div class="card_image"> <img src="/training/git.png" /> </div>
+                <p>Git</p>
+                </div>
+            </a>
+            <a href="{{ .Site.LanguagePrefix }}/training/github/">
+                <div class="card 1">
+                <div class="card_image"> <img src="/training/github.png" /> </div>
+                <p>Github</p>
+                </div>
+            </a>
+            <a href="{{ .Site.LanguagePrefix }}/training/vscode/">
+                <div class="card 1">
+                <div class="card_image"> <img src="/training/vscode.png" /> </div>
+                <p>Visual Studio Code</p>
+                </div>
+            </a>
+        </div>
+        <hr>
+        <h2>{{ i18n "learnProgrammingLanguages" }}</h2>
+        <hr>
+        <div class="cards-list">
+            <a href="{{ .Site.LanguagePrefix }}/training/python/">
+                <div class="card 1">
+                <div class="card_image"> <img src="/training/python.png" /> </div>
+                <p>Python</p>
+                </div>
+            </a>
+            <a href="{{ .Site.LanguagePrefix }}/training/go/">
+                <div class="card 1">
+                <div class="card_image"> <img src="/training/golang.png" /> </div>
+                <p>Go</p>
+                </div>
+            </a>
+        </div>
+    </div>
+{{- end -}}

@@ -5,7 +5,8 @@ draft: false
 authors: ["FSG"]
 description: "Bloğun ilk yazısı"
 tags: ["test"]
-categories: ["Test"]
+categories: ["Tests",]
+fields: ["Felsefe", "Programlama"]
 ---
 
 Bloğun ilk yazısı (Test etmek için)

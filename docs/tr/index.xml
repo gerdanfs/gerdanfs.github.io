@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Fatih Serhat Gerdan</title>
+        <link>http://gerdanfs.github.io/tr/</link>
+        <description>Programlama (python), veri bilimi, makine öğrenmesi, felsefe ve sosyoloji üzerine ilginç, derinlemesine yazılar içeren bir blog. Gelin beraber büyüyelim!</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+            <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 19 Jan 2022 19:13:12 &#43;0300</lastBuildDate>
+            <atom:link href="http://gerdanfs.github.io/tr/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Medium Test Makalesi</title>
+    <link>http://gerdanfs.github.io/tr/medium-test/</link>
+    <pubDate>Tue, 18 Jan 2022 01:52:05 &#43;0300</pubDate><author>
+                    <name>Fatih Serhat Gerdan</name><uri>http://gerdanfs.github.io/tr/authors/fsg</uri><email>gerdanfs@gmail.com</email></author><guid>http://gerdanfs.github.io/tr/medium-test/</guid>
+    <description><![CDATA[YYYY]]></description>
+</item><item>
+    <title>Selam Dünya!</title>
+    <link>http://gerdanfs.github.io/tr/hello-world/</link>
+    <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate><author>
+                    <name>Fatih Serhat Gerdan</name><uri>http://gerdanfs.github.io/tr/authors/fsg</uri><email>gerdanfs@gmail.com</email></author><guid>http://gerdanfs.github.io/tr/hello-world/</guid>
+    <description><![CDATA[<p>Bloğun ilk yazısı (Test etmek için)</p>]]></description>
+</item></channel>
+</rss>

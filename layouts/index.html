@@ -1,0 +1,78 @@
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+    {{- $profile := .Site.Params.home.profile -}}
+    {{- $posts := .Site.Params.home.posts -}}
+
+    {{- /* FSG: My Variables */ -}}
+    {{- $blogPosts := (where .Site.RegularPages "Type" "posts") -}}
+    {{- $mediumPosts := (where .Site.RegularPages "Params.categories" "intersect" (slice "Medium")) -}}
+    {{- $notmediumPosts := $blogPosts | complement $mediumPosts -}}
+
+    <div class="page home"{{ if ne $posts.enable false}} posts{{ end }}>
+        {{- /* Profile */ -}}
+        {{- if ne $profile.enable false -}}
+            {{- partial "home/profile.html" . -}}
+        {{- end -}}
+    </div>
+
+    <div class="page archive" style="padding-top: 0.4em;">
+        <div class="categories-card">
+            {{- /* Latest Posts */ -}}
+            <div class="card-item">
+                <div class="card-item-wrapper">
+                    <h3 class="card-item-title">
+                        <a href="{{ .Site.LanguagePrefix }}/posts/">
+                            <i class="fas fa-archive"></i>&nbsp;{{- .Site.Params.blogPostsTitle -}}
+                        </a>
+                        <br>
+                        <span style="font-weight: 300; font-size: medium;">
+                            Latest
+                       </span> 
+                    </h3>
+                    {{- range first 5 $notmediumPosts -}}
+                        <article class="archive-item">
+                            <!-- If external link exists in post matter -->
+                            {{ if isset .Params "externallink" }}
+                            <a href="{{ .Params.externallink }}" target="_blank" class="archive-item-link">
+                                {{ .Title }} &#8599;</a>
+                            {{else}}
+                            <!-- Else show internal post page -->
+                            <a href="{{ .RelPermalink }}" class="archive-item-link">
+                                {{- .Title -}}
+                            </a>
+                            {{ end }}
+                        </article>
+                    {{- end -}}
+                </div>
+            </div>
+            {{- /* Latest Posts */ -}}
+            <div class="card-item">
+                <div class="card-item-wrapper">
+                    <h3 class="card-item-title">
+                        <a href="{{ .Site.LanguagePrefix }}/categories/medium/">
+                            <i class="fab fa-medium"></i>&nbsp;{{- .Site.Params.mediumPostsTitle -}}
+                        </a>
+                        <br>
+                        <span style="font-weight: 300; font-size: medium;">
+                            Latest
+                       </span> 
+                    </h3>
+                    {{- range first 5 $mediumPosts -}}
+                        <article class="archive-item">
+                            <!-- If external link exists in post matter -->
+                            {{ if isset .Params "externallink" }}
+                            <a href="{{ .Params.externallink }}" target="_blank" class="archive-item-link">
+                                {{ .Title }} &#8599;</a>
+                            {{else}}
+                            <!-- Else show internal post page -->
+                            <a href="{{ .RelPermalink }}" class="archive-item-link">
+                                {{- .Title -}}
+                            </a>
+                            {{ end }}
+                        </article>
+                    {{- end -}}
+                </div>
+            </div>
+        </div>   
+    </div>
+{{- end -}}

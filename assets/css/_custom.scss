@@ -1,4 +1,29 @@
 // ==============================
 // Custom style
-// 自定义样式
 // ==============================
+
+.page {
+    position: relative;
+    max-width: initial;
+    width: 60%;
+    margin: 1% auto;
+    [pageStyle=wide][autoTOC=true] & {
+      margin-left: 5%;
+      margin-right: auto;
+      width: 73%;
+    }
+    [pageStyle=wide][autoTOC=false] & {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    [header-desktop] & {
+      padding-top: $header-height;
+    }
+  
+    [header-desktop=normal] & {
+      padding-top: 0;
+    }
+  
+    @include blur;
+  }

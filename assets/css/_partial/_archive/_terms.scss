@@ -1,0 +1,95 @@
+.categories-card, .author-card, .series-card {
+  margin: 0 auto;
+  margin-top: 1.0rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 1.6rem;
+
+  .card-item {
+    font-size: .875rem;
+    text-align: center;
+    width: 45%;
+    display: flex;
+    margin-top: 0.5rem;
+    min-height: 13.5rem;
+    padding: 0 2%;
+    position: relative;
+    background-color: rgba(64, 138, 74, 0.2);
+    @include box-shadow(0 2px 4px -1px rgba(14, 76, 211, 0.2));
+    @include border-radius(1.0rem);
+
+    .card-item-wrapper {
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+
+      .card-item-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 1rem;
+        margin-bottom: .75rem;
+        border-bottom: 2px solid;
+      }
+
+      span {
+        float: center;
+        
+      }
+    }
+  }
+}
+
+.archive-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.archive-item-link {
+  min-width: 10%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &:hover {
+    color: $global-link-hover-color;
+    background-color: transparent;
+  }
+
+  [theme=dark] & {
+    color: $global-link-color-dark;
+
+    &:hover {
+      color: $global-link-hover-color-dark;
+    }
+  }
+  [theme=black] & {
+    color: $global-link-color-black;
+
+    &:hover {
+      color: $global-link-hover-color-black;
+    }
+  }
+}
+
+.archive-item-date {
+  text-align: right;
+  color: $global-font-secondary-color;
+  font-variant-numeric: tabular-nums;
+  min-width: fit-content;
+  [theme=dark] & {
+    color: $global-font-secondary-color-dark;
+  }
+  [theme=black] & {
+    color: $global-font-secondary-color-black;
+  }
+}
+
+.more-post {
+  text-align: right;
+}

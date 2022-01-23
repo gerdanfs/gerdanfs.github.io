@@ -106,7 +106,7 @@ other = "İptal et"
 other = "Herhangi bir sonuç bulunamadı"
 
 [lunrLanguageCode]
-other = "en"
+other = "tr"
 
 [copyToClipboard]
 other = "Panoya kopyala"
@@ -115,10 +115,10 @@ other = "Panoya kopyala"
 other = "Bu web sitesi, deneyiminizi geliştirmek için çerezler kullanır."
 
 [cookieconsentDismiss]
-other = "Got it!"
+other = "Anladım!"
 
 [cookieconsentLink]
-other = "Learn more"
+other = "Daha fazla bilgi edin"
 # === partials/assets.html ===
 
 # === partials/plugin/share.html ===
@@ -155,7 +155,7 @@ one = "Bir dakika"
 other = "{{ .Count }} dakika"
 
 [views]
-other = "views"
+other = "görüntülenme sayısı"
 
 [comments]
 other = "yorumlar"
@@ -167,31 +167,31 @@ other = "Yazar"
 other = "Güncellenme tarihi {{ .Date }}"
 
 [readMarkdown]
-other = "Read markdown"
+other = "Markdown versiyonuna bak"
 
 [viewSource]
 other = "Kaynağa bak"
 
 [editThisPage]
-other = "Edit this page"
+other = "Bu sayfayı düzenle"
 
 [reportThisPage]
-other = "Report issue"
+other = "Sorun bildir"
 
 [back]
-other = "Back"
+other = "Geri"
 
 [home]
 other = "Ana Sayfa"
 
 [readMore]
-other = "Read more..."
+other = "Devamını Oku..."
 
 [outdatedInfoWarningBefore]
-other = "This article was last updated on "
+other = "Bu makale en son şu tarihte güncellendi: "
 
 [outdatedInfoWarningAfter]
-other = ", the content may be out of date."
+other = ", içerik güncel olmayabilir."
 
 [sponsor]
 other = "Sponsor"
@@ -202,12 +202,12 @@ other = "Sponsor"
 other = "Sayfa bulunamadı"
 
 [pageNotFoundText]
-other = "The page you're looking for doesn't exist. Sorry."
+other = "Maalesef aradığınız sayfa mevcut değil."
 # === 404.html ===
 
 # === shortcodes/admonition.html ===
 [note]
-other = "Note"
+other = "Not"
 
 [abstract]
 other = "Abstract"
@@ -216,31 +216,31 @@ other = "Abstract"
 other = "Info"
 
 [tip]
-other = "Tip"
+other = "Tüyo"
 
 [success]
-other = "Success"
+other = "Başarı"
 
 [question]
-other = "Question"
+other = "Soru"
 
 [warning]
-other = "Warning"
+other = "Uyarı"
 
 [failure]
-other = "Failure"
+other = "Arıza"
 
 [danger]
-other = "Danger"
+other = "Tehlike"
 
 [bug]
 other = "Bug"
 
 [example]
-other = "Example"
+other = "Örnek"
 
 [quote]
-other = "Quote"
+other = "Alıntı"
 # === shortcodes/admonition.html ===
 
 # === shortcodes/version.html ===
@@ -253,3 +253,83 @@ other = "DEĞİŞTİ"
 [deleted]
 other = "SİLİNDİ"
 # === shortcodes/version.html ===
+
+############################################################
+# === My own translations === 
+
+[field]
+other = "Alan"
+
+[fields]
+other = "Alanlar"
+
+[mainQuote]
+other = "Özgürlük, kendi kendine formüle edilmiş kurallara itaattir."
+
+[underConstruction]
+other = "Bu bölüm yapım aşamasındadır!"
+
+[byTheNumberOfPosts]
+other = "Yazı Sayısına Göre Sıralı"
+
+[alphabeticallyOrdered]
+other = "Alfabetik Sıralı"
+
+# Training page
+[becomePowerUser]
+other = "Usta Bir Kullanıcı Ol"
+[fundamentals]
+other = "Temeller"
+
+[learnProgrammingLanguages]
+other = "Programlama Öğren"
+
+# Reviews page
+[revMessage]
+other = "Aşağıdaki kategorilerde beğendiğim bazı şeyleri listeledim. Daha sonra başka kategoriler de ekleyeceğim. Şimdilik inceleme yazıları yok. Her ay birkaç inceleme yazısı eklemeyi planlıyorum. Kategorilerdeki şeylerin sayısını da arttıracağım. Sayfaları dark veya black modda görüntülemenizi öneririm."
+[bookReviews]
+other = "kitap incelemeleri"
+[fiction]
+other = "Kurgusal"
+[nonFiction]
+other = "Kurgusal olmayan"
+[programming]
+other = "Programlama"
+[philosophy]
+other = "Felsefe"
+
+[visualMediaReviews]
+other = "görsel medya incelemeleri"
+[movies]
+other = "Filmler"
+[documentaries]
+other = "Belgeseller"
+[tv]
+other = "Diziler"
+[shortFilms]
+other = "Kısa Filmler"
+
+[musicReviews]
+other = "müzik albümü incelemeleri"
+[variousAlbums]
+other = "Çeşitli Albümler"
+[progRock]
+other = "Progresif Rock"
+
+[otherReviews]
+other = "diğer incelemeler"
+[apps]
+other = "Aplikasyonlar"
+[games]
+other = "Oyunlar"
+
+[clickTheCover]
+other = "Kapak resimlerini tıklayınız."
+[shortReview]
+other = "Kısa inceleme"
+[longReview]
+other = "Uzun inceleme"
+[shortReviewAbbr]
+other = "#K"
+[longReviewAbbr]
+other = "#U"

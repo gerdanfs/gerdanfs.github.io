@@ -1,17 +1,22 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>My New Hugo Site</title>
+        <title>Fatih Serhat Gerdan</title>
         <link>http://gerdanfs.github.io/</link>
-        <description>My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 10 Jan 2022 19:29:11 &#43;0300</lastBuildDate>
+        <description>A blog featuring interesting in-depth posts about programming (python), data science, machine learning, philosophy and sociology. Let&#39;s grow together!</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+            <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 19 Jan 2022 19:13:12 &#43;0300</lastBuildDate>
             <atom:link href="http://gerdanfs.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>Hello World</title>
-    <link>http://gerdanfs.github.io/posts/hello-world/</link>
-    <pubDate>Mon, 10 Jan 2022 19:29:11 &#43;0300</pubDate><author>
-        <name>Author</name>
-    </author><guid>http://gerdanfs.github.io/posts/hello-world/</guid>
-    <description><![CDATA[Test Test TestHello World!
-Hugo Hugo HugoTest Test Test]]></description>
+    <title>Medium Test Article</title>
+    <link>http://gerdanfs.github.io/medium-test/</link>
+    <pubDate>Tue, 18 Jan 2022 01:52:05 &#43;0300</pubDate><author>
+                    <name>Fatih Serhat Gerdan</name><uri>http://gerdanfs.github.io/authors/fsg</uri><email>gerdanfs@gmail.com</email></author><guid>http://gerdanfs.github.io/medium-test/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Hello World!</title>
+    <link>http://gerdanfs.github.io/hello-world/</link>
+    <pubDate>Wed, 12 Jan 2022 00:00:00 &#43;0000</pubDate><author>
+                    <name>Fatih Serhat Gerdan</name><uri>http://gerdanfs.github.io/authors/fsg</uri><email>gerdanfs@gmail.com</email></author><guid>http://gerdanfs.github.io/hello-world/</guid>
+    <description><![CDATA[<p>The first post for testing purposes.</p>]]></description>
 </item></channel>
 </rss>

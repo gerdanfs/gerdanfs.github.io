@@ -41,7 +41,7 @@
         {{- partial "footer.html" . -}}
         {{- /* FSG: My custom debugger */ -}}
         {{ if .Site.Params.Fsg.enableCustomDebugger }}
-            {{- partial "debug_hugo.html" . -}}
+            {{- partial "debugHugo.html" . -}}
         {{ end }}
     </div>
 

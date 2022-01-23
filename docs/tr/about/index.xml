@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Fatih Serhat Gerdan</title>
+    <link>http://gerdanfs.github.io/tr/about/</link>
+    <description>Recent content in Abouts on Fatih Serhat Gerdan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <managingEditor>gerdanfs.gmail.com (Fatih Serhat Gerdan)</managingEditor>
+    <webMaster>gerdanfs.gmail.com (Fatih Serhat Gerdan)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://gerdanfs.github.io/tr/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Benim Hakkımda</title>
+      <link>http://gerdanfs.github.io/tr/about/about-me/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/tr/about/about-me/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Site Hakkında</title>
+      <link>http://gerdanfs.github.io/tr/about/about-site/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/tr/about/about-site/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>Kısa Bir Kişisel Değerler Listesi</title>
+      <link>http://gerdanfs.github.io/tr/about/concise-list-of-personal-values/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/tr/about/concise-list-of-personal-values/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>Kullandığım Teknolojiler</title>
+      <link>http://gerdanfs.github.io/tr/about/uses/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/tr/about/uses/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>Bu Aralar Yaptıklarım</title>
+      <link>http://gerdanfs.github.io/tr/now/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/tr/now/</guid>
+      <description>TestTest test</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>http://gerdanfs.github.io/tr/about/credits/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      <author>gerdanfs.gmail.com (Fatih Serhat Gerdan)</author>
+      <guid>http://gerdanfs.github.io/tr/about/credits/</guid>
+      <description>Resimler mohamed Hassan&amp;lsquo;ın resmi (Pixabay&amp;lsquo;dan yüklendi).  </description>
+    </item>
+    
+  </channel>
+</rss>
