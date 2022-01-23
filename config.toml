@@ -194,7 +194,7 @@ enableEmoji = true
         [languages.en.params.home.profile]
           enable = true
           # URL of avatar shown in home page
-          avatarURL = "/various/my-photo.png"
+          avatarURL = "/my-photo.png"
           # title shown in home page (HTML format is supported)
           title = ""
           # subtitle shown in home page
@@ -466,7 +466,7 @@ enableEmoji = true
           [languages.tr.params.home.profile]
             enable = true
             # URL of avatar shown in home page
-            avatarURL = "/various/my-photo.png"
+            avatarURL = "/my-photo.png"
             # title shown in home page (HTML format is supported)
             title = ""
             # subtitle shown in home page
@@ -512,7 +512,7 @@ enableEmoji = true
   # date format
   dateFormat = "2006-01-02"
   # website images for Open Graph and Twitter Cards
-  images = ["/various/my-photo.png"]
+  images = ["/my-photo.png"]
   # enable PWA
   # enablePWA = true
   # license information
@@ -850,7 +850,7 @@ enableEmoji = true
   name = "Fatih Serhat Gerdan"
   email = "gerdanfs.gmail.com"
   #link = "https://github.com/gerdanfs"
-  avatar = "/various/my-photo.png"
+  avatar = "/my-photo.png"
 
 # Sitemap config
 [sitemap]
