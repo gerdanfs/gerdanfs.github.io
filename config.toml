@@ -783,14 +783,9 @@ enableEmoji = true
     enable = true
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "UA-217779143-1"
       # whether to anonymize IP
       anonymizeIP = true
-    # Umami Analytics
-    [params.analytics.umami]
-      data_website_id = ""
-      src = ""
-      data_domains = ""
 
   # Cookie consent config
   [params.cookieconsent]
