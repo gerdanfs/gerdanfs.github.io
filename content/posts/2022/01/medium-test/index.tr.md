@@ -1,6 +1,6 @@
 ---
 title: "Medium Test Makalesi"
-externallink: "https://medium.com/@harrycresswell/using-sketch-libraries-and-primitives-to-build-an-even-better-system-of-buttons-ecc8f25486ac"
+externallink: "https://medium.com/@gerdanfs/"
 subtitle: "XXX"
 date: 2022-01-18T01:52:05+03:00
 lastmod: 2022-01-18T01:52:05+03:00
