@@ -1,0 +1,13 @@
+title = "My Hugo FixIt Site"
+baseURL = "http://example.org/"
+# determines default content language ["en", "zh-cn", "fr", "pl", ...]
+defaultContentLanguage = "en"
+# language code ["en", "zh-CN", "fr", "pl", ...]
+languageCode = "en"
+
+# Change the default theme to be used when building the site with Hugo
+theme = "FixIt"
+
+[params]
+  # FixIt theme version
+  version = "0.2.15"
