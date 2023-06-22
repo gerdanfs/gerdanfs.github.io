@@ -11,3 +11,10 @@ theme = "FixIt"
 [params]
   # FixIt theme version
   version = "0.2.15"
+
+##########################################
+# FSG: My custom variables and parameters
+[params.fsg]
+  enableCustomDebugger = true
+
+##########################################

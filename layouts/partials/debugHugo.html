@@ -1,0 +1,151 @@
+{{/* 
+    I borrowed this debugging idea from these pages:
+      https://willschenk.com/articles/2018/building-a-hugo-site/
+      https://mertbakir.gitlab.io/hugo/understanding-hugo/
+
+    Use this partial in baseof.html, simply by adding this line: 
+      {{- partial "debugHugo.html" . -}}
+
+    TODO: Include other page and site variables. 
+*/}}
+
+<style>
+    hr {border: 10px solid rgb(153, 22, 22);}
+    p,h1 {text-align: center; }
+    table,th,td {border: 2px solid black; max-width: 1000px;}
+    table {table-layout: fixed; margin-right: auto; margin-left: auto;}
+    td {word-wrap: break-word;}
+    table {width: 100%; text-align: center;}
+    th {width: 20%;}
+    td {width: 40%;}
+  </style>
+  
+  <br>
+  <br>
+  <p style="font-size: large; background: rgb(122, 223, 7);">
+    Debugging, Debugging, Debugging, Debugging, Debugging, Debugging, Debugging, Debugging
+  </p>
+  
+  <table>
+    <tr><th>Custom Debugger Enabled</th><td>Enable to analyze site variables and parameters (for learning purposes).<td>{{ .Site.Params.Fsg.enableCustomDebugger}}</td></tr>
+    <tr><th>.Site.Params.home.profile</th><td>XXX</td><td>{{ .Site.Params.home.profile }}</td></tr>
+    <tr><th>.Site.Params.home.posts</th><td>XXX</td><td>{{ .Site.Params.home.posts }}</td></tr>
+    <tr><th>.Site.Params.page.hiddenFromHomePage</th><td>XXX</td><td>{{ .Site.Params.page.hiddenFromHomePage }}</td></tr>
+  </table>
+  
+  <h1 style="color:rgb(180, 5, 5)"> <a style="color: blue;" href="https://gohugo.io/variables/site/">Site Variables </a> (aka Global Variables) </h1>
+  
+  <table>
+    <tr><th>.Site.AllPages</th><td>Array of All Pages, regardless of their translation.</td><td>{{ .Site.AllPages }}</td></tr>
+    <tr><th>.Site.Author</th><td>A map of the authors as defined in the site configuration.</td><td>{{ .Site.Author }}</td></tr>
+    <tr><th>.Site.BaseURL</th><td>the base URL for the site as defined in the site configuration.</td><td>{{ .Site.BaseURL }}</td></tr>
+    <tr><th>.Site.BuildDrafts</th><td>a boolean (default: false) to indicate whether to build drafts as defined in the site configuration.</td><td>{{ .Site.BuildDrafts }}</td></tr>
+    <tr><th>.Site.Copyright</th><td>a string representing the copyright of your website as defined in the site configuration.</td><td>{{ .Site.Copyright }}</td></tr>
+    <tr><th>.Site.Data</th><td>custom data, see <a style="color: blue;" href="https://gohugo.io/templates/data-templates/">Data Templates.</a></td><td>{{ .Site.Data }}</td></tr>
+    <tr><th>.Site.DisqusShortname</th><td>a string representing the shortname of the Disqus shortcode as defined in the site configuration.</td><td>{{ .Site.DisqusShortname }}</td></tr>
+    <tr><th>.Site.GoogleAnalytics</th><td>a string representing your tracking code for Google Analytics as defined in the site configuration.</td><td>{{ .Site.GoogleAnalytics }}</td></tr>
+    <tr><th>.Site.Home</th><td>reference to the homepage’s <a style="color: blue;" href="https://gohugo.io/variables/page/">page object.</a></td><td>{{ .Site.Home }}</td></tr>
+    <tr><th>.Site.IsMultiLingual</th><td>whether there are more than one language in this site. See <a style="color: blue;" href="https://gohugo.io/content-management/multilingual/">Multilingual</a> for more information.</td><td>{{ .Site.IsMultiLingual }}</td></tr>
+    <tr><th>.Site.IsServer</th><td>a boolean to indicate if the site is being served with Hugo’s built-in server. See <a style="color: blue;" href="https://gohugo.io/commands/hugo_server/">hugo server</a> for more information.</td><td>{{ .Site.IsServer }}</td></tr>
+    <tr><th>.Site.Language.Lang</th><td>the language code of the current locale (e.g., en).</td><td>{{ .Site.Language.Lang }}</td></tr>
+    <tr><th>.Site.Language.LanguageName</th><td>the full language name (e.g. English).</td><td>{{ .Site.Language.LanguageName }}</td></tr>
+    <tr><th>.Site.Language.Weight</th><td>the weight that defines the order in the .Site.Languages list.</td><td>{{ .Site.Language.Weight }}</td></tr>
+    <tr><th>.Site.Language</th><td>indicates the language currently being used to render the website. This object’s attributes are set in site configurations' language definition.</td><td>{{ .Site.Language }}</td></tr>
+    <tr><th>.Site.LanguageCode</th><td>a string representing the language tag as defined in the site configuration.</td><td>{{ .Site.LanguageCode }}</td></tr>
+    <tr><th>.Site.LanguagePrefix</th><td>this can be used to prefix URLs to point to the correct language. It will even work when only one defined language. See also the functions <a style="color: blue;" href="https://gohugo.io/functions/abslangurl/">absLangURL</a> and <a style="color: blue;" href="https://gohugo.io/functions/rellangurl">relLangURL.</a></td><td>{{ .Site.LanguagePrefix }}</td></tr>
+    <tr><th>.Site.Languages</th><td>an ordered list (ordered by defined weight) of languages.</td><td>{{ .Site.Languages }}</td></tr>
+    <tr><th>.Site.LastChange</th><td>a string representing the date/time of the most recent change to your site. This string is based on the <a style="color: blue;" href="https://gohugo.io/content-management/front-matter">date variable in the front matter</a> of your content pages.</td><td>{{ .Site.LastChange }}</td></tr>
+    <tr><th>.Site.Menus</th><td>all of the menus in the site.</td><td>{{ .Site.Menus }}</td></tr>
+    <tr><th>.Site.Pages</th>
+      <td>Collection of all pages of the site: regular pages, sections, taxonomies, etc. Superset of everything!
+        Array of all content ordered by Date with the newest first. 
+        This array contains only the pages in the current language. 
+        See <a style="color: blue;" href="https://gohugo.io/variables/site/#sitepages-compared-to-pages">.Site.Pages compared to .Pages</a> 
+      </td>
+      <td>{{ .Site.Pages }}</td></tr>
+    <tr><th>.Site.RegularPages</th>
+      <td>
+        A shortcut to the regular page collection. 
+        A regular page is a “post” page or a “content” page. A leaf bundle is a regular page.
+        .Site.RegularPages is equivalent to <em>where .Site.Pages "Kind" "page"</em>.
+      </td>
+      <td>{{ .Site.RegularPages }}</td></tr>
+    <tr><th>.Site.Sections</th><td>top-level directories of the site.</td><td>{{ .Site.Sections }}</td></tr>
+    <tr><th>.Site.Taxonomies</th><td>the <a style="color: blue;" href="https://gohugo.io/taxonomies/usage/">taxonomies</a> for the entire site. Also see section <a style="color: blue;" href="https://gohugo.io/variables/taxonomy/#use-sitetaxonomies-outside-of-taxonomy-templates">Use .Site.Taxonomies Outside of Taxonomy Templates.</a></td><td>{{ .Site.Taxonomies }}</td></tr>
+    <tr><th>.Site.Title</th><td>a string representing the title of the site.</td><td>{{ .Site.Title }}</td></tr>
+    <tr><th>.Site.Params</th><td>.Site.Params is a container holding the values from the params section of your site configuration. There may be too many params. An example is given below:</td><td> </td></tr>
+    <tr><th>.Site.Params.description</th><td>XXX</td><td>{{ .Site.Params.description }}</td></tr>
+    <tr><th>.Pages</th><td>Collection of regular pages and only first-level section pages under the current list page.</td><td>{{ .Pages }}</td></tr>
+    <tr><th>.RegularPages</th><td>Collection of only regular pages under the current list page. This excludes regular pages in nested sections/list pages (those are subdirectories with an _index.md file.</td><td>{{ .RegularPages }}</td></tr>
+    <tr><th>.RegularPagesRecursive</th><td>Collection of all regular pages under a list page. This includes regular pages in nested sections/list pages.</td><td>{{ .RegularPagesRecursive }}</td></tr>
+  </table>
+  
+  <h1 style="color:rgb(180, 5, 5)"> <a style="color: blue;" href="https://gohugo.io/variables/page/">Page Variables </a> </h1>
+  
+  <table>
+    <tr><th>.</th><td>dot operator</td><td>{{ . }}</td></tr>
+    <tr><th>.AlternativeOutputFormats</th><td>contains all alternative formats for a given page. (See Output Formats.)</td><td>{{ .AlternativeOutputFormats }}</td></tr>
+    <tr><th>.Aliases</th><td>aliases of this page</td><td>{{ .Aliases }}</td></tr>
+    <tr><th>.BundleType</th><td>the bundle type: leaf, branch, or an empty string if the page is not a bundle.</td><td>{{ .BundleType }}</td></tr>
+    <tr><th>.Content</th><td>the content itself, defined below the front matter.</td><td>XXX</td></tr>
+    <tr><th>.Data</th><td>the data specific to this type of page.</td><td>{{ .Data }}</td></tr>
+    <tr><th>.Date</th><td>the date associated with the page; .Date pulls from the date field in a content’s front matter. See also .ExpiryDate, .PublishDate, and .Lastmod.</td><td>{{ .Date }}</td></tr>
+    <tr><th>.Description</th><td>the description for the page.</td><td>{{ .Description }}</td></tr>
+    <tr><th>.Draft</th><td>a boolean, true if the content is marked as a draft in the front matter.</td><td>{{ .Draft }}</td></tr>
+    <tr><th>.ExpiryDate</th><td>the date on which the content is scheduled to expire; .ExpiryDate pulls from the expirydate field in a content’s front matter. See also .PublishDate, .Date, and .Lastmod.</td><td>{{ .ExpiryDate }}</td></tr>
+    <tr><th>.File</th><td>filesystem-related data for this content file. See also File Variables.</td><td>{{ .File }}</td></tr>
+    <tr><th>.FuzzyWordCount</th><td>the approximate number of words in the content.</td><td>{{ .FuzzyWordCount }}</td></tr>
+    <tr><th>.IsHome</th><td>true in the context of the homepage.</td><td>{{ .IsHome }}</td></tr>
+    <tr><th>.IsNode</th><td>always false for regular content pages.</td><td>{{ .IsNode }}</td></tr>
+    <tr><th>.IsPage</th><td>always true for regular content pages.</td><td>{{ .IsPage }}</td></tr>
+    <tr><th>.IsSection</th><td>true if <a style="color: blue;" href="https://gohugo.io/templates/section-templates/#page-kinds">.Kind</a> is section.</td><td>{{ .IsSection }}</td></tr>
+    <tr><th>.IsTranslated</th><td>true if there are translations to display.</td><td>{{ .IsTranslated }}</td></tr>
+    <tr><th>.Keywords</th><td>the meta keywords for the content.</td><td>{{ .Keywords }}</td></tr>
+    <tr><th>.Kind</th><td>the page’s kind. Possible return values are page, home, section, taxonomy, or term. Note that there are also RSS, sitemap, robotsTXT, and 404 kinds, but these are only available during the rendering of each of these respective page’s kind and therefore not available in any of the Pages collections.</td><td>{{ .Kind }}</td></tr>
+    <tr><th>.Language</th><td>a language object that points to the language’s definition in the site config. .Language.Lang gives you the language code.</td><td>{{ .Language }}</td></tr>
+    <tr><th>.Lastmod</th><td>the date the content was last modified. .Lastmod pulls from the lastmod field in a content’s front matter. See also .ExpiryDate, .Date, .PublishDate, and .GitInfo.</td><td>{{ .Lastmod }}</td></tr>
+    <tr><th>.LinkTitle</th><td>access when creating links to the content. If set, Hugo will use the linktitle from the front matter before title.</td><td>{{ .LinkTitle }}</td></tr>
+    <tr><th>.Next</th><td>Points up to the next regular page (sorted by Hugo’s default sort). Calling .Next from the first page returns nil.</td><td>{{ .Next }}</td></tr>
+    <tr><th>.NextInSection</th><td>Points up to the next regular page below the same top level section (e.g. in /blog)). Pages are sorted by Hugo’s default sort. </td><td>{{ .NextInSection }}</td></tr>
+    <tr><th>.OutputFormats</th><td>contains all formats, including the current format, for a given page. Can be combined the with .Get function to grab a specific format. (See Output Formats.)</td><td>{{ .OutputFormats }}</td></tr>
+    <tr><th>.Pages</th><td>a collection of associated pages. This value will be nil within the context of regular content pages. </td><td>{{ .Pages }}</td></tr>
+    <tr><th>.Permalink</th><td>the Permanent link for this page; see Permalinks</td><td>{{ .Permalink }}</td></tr>
+    <tr><th>.Plain</th><td>the Page content stripped of HTML tags and presented as a string.</td><td>XXX</td></tr>
+    <tr><th>.PlainWords</th><td>the slice of strings that results from splitting .Plain into words, as defined in Go’s strings.Fields.</td><td>XXX</td></tr>
+    <tr><th>.Prev</th><td>Points down to the previous regular page (sorted by Hugo’s default sort).</td><td>{{ .Prev }}</td></tr>
+    <tr><th>.PrevInSection</th><td>Points down to the previous regular page below the same top level section (e.g. /blog). Pages are sorted by Hugo’s default sort.</td><td>{{ .PrevInSection }}</td></tr>
+    <tr><th>.PublishDate</th><td>the date on which the content was or will be published; .Publishdate pulls from the publishdate field in a content’s front matter.</td><td>{{ .PublishDate }}</td></tr>
+    <tr><th>.RawContent</th><td>raw markdown content without the front matter. Useful with remarkjs.com</td><td>XXX</td></tr>
+    <tr><th>.ReadingTime</th><td>the estimated time, in minutes, it takes to read the content.</td><td>{{ .ReadingTime }}</td></tr>
+    <tr><th>.Resources</th><td>resources such as images and CSS that are associated with this page</td><td>{{ .Resources }}</td></tr>
+    <tr><th>.RelPermalink</th><td>the relative permanent link for this page.</td><td>{{ .RelPermalink }}</td></tr>
+    <tr><th>.Site</th><td>see Site Variables.</td><td>{{ .Site }}</td></tr>
+    <tr><th>.Sites</th><td>returns all sites (languages). A typical use case would be to link back to the main language</td><td>{{ .Sites }}</td></tr>
+    <tr><th>.Sites.First</th><td>returns the site for the first language. If this is not a multilingual setup, it will return itself.</td><td>{{ .Sites.First }}</td></tr>
+    <tr><th>.Summary</th><td>a generated summary of the content for easily showing a snippet in a summary view. The breakpoint can be set manually.</td><td>{{ .Summary }}</td></tr>
+    <tr><th>.TableOfContents</th><td>the rendered table of contents for the page.</td><td>XXX</td></tr>
+    <tr><th>.Title</th><td>the title for this page.</td><td>{{ .Title }}</td></tr>
+    <tr><th>.Translations</th><td>a list of translated versions of the current page. See Multilingual Mode for more information.</td><td>{{ .Translations }}</td></tr>
+    <tr><th>.TranslationKey</th><td>the key used to map language translations of the current page. </td><td>{{ .TranslationKey }}</td></tr>
+    <tr><th>.Truncated</th><td>a boolean, true if the .Summary is truncated. Useful for showing a “Read more…” link only when necessary. </td><td>{{ .Truncated }}</td></tr>
+    <tr><th>.Type</th><td>the content type of the content (e.g., posts).</td><td>{{ .Type }}</td></tr>
+    <tr><th>.Weight</th><td>assigned weight (in the front matter) to this content, used in sorting.</td><td>{{ .Weight }}</td></tr>
+    <tr><th>.WordCount</th><td>the number of words in the content.</td><td>{{ .WordCount }}</td></tr>
+  </table>
+  
+  <h1 style="color:rgb(180, 5, 5)"> <a style="color: blue;" href="https://gohugo.io/variables/page/#section-variables-and-methods">Section Variables</a></h1>
+  <table>
+    <tr><th>.CurrentSection</th><td>The page’s current section. The value can be the page itself if it is a section or the homepage.</td><td>{{ .CurrentSection }}</td></tr>
+    <tr><th>.FirstSection</th><td>The page’s first section below root, e.g. /docs, /blog etc.</td><td>{{ .FirstSection }}</td></tr>
+    <tr><th>.Parent</th><td>A section’s parent section or a page’s section.</td><td>{{ .Parent }}</td></tr>
+    <tr><th>.Section</th><td>The section this content belongs to. Note: For nested sections, this is the first path element in the directory, for example, /blog/funny/mypost/ => blog.</td><td>{{ .Section }}</td></tr>
+    <tr><th>.Sections</th><td>The sections below this content.</td><td>{{ .Sections }}</td></tr>
+  </table>
+  
+  
+  <br>
+  <p style="font-size: large; background: rgb(122, 223, 7);">
+    Debugging, Debugging, Debugging, Debugging, Debugging, Debugging, Debugging, Debugging
+  </p>
+  <br>
+  
