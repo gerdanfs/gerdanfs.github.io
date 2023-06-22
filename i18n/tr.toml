@@ -1,0 +1,171 @@
+# Translations for Turkish
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === init ===
+[init]
+configurationError = "Yapılandırma Hatası\nFixIt sürüm parametresini doğru şekilde yapılandırmadınız. Bakınız https://fixit.lruihao.cn/documentation/basics/#theme-configuration"
+compatibilityError = "Uyumsuzluk Hatası.  ({{ .From }} -> {{ .To }}):\nUyumsuz bir güncellemeniz var. Bakınız https://github.com/hugo-fixit/FixIt/releases"
+RCVersionWarn = "FixIt'in geliştirme sürümünü kullanıyorsunuz. Lütfen kararlı bir sürümü kullanmayı düşünün.\nBakınız https://github.com/hugo-fixit/FixIt/releases"
+devEnvWarn = "Current environment is \"development\". The \"comment system\", \"CDN\" and \"fingerprint\" will be disabled."
+quicklyUpgrade = "Quickly upgrade use command: "
+# === init ===
+
+# === baseof ===
+[baseof]
+backToTop = "En başa dön"
+viewComments = "Yorumlara bak"
+noscript = "FixIt, JavaScript etkinleştirildiğinde en iyi şekilde çalışır."
+# === baseof ===
+
+# === Taxonomy ===
+[allSome]
+other = "Bütün {{ .Some }}"
+
+[category]
+other = "Kategori"
+
+[categories]
+other = "Kategoriler"
+
+[tag]
+other = "Etiket"
+
+[tags]
+other = "Etiketler"
+
+[posts]
+other = "Yazılar"
+
+[taxonomy.totalwordCount]
+one = "Toplam bir kelime"
+other = "Toplam {{ .Count }} kelime"
+# === Taxonomy ===
+
+# === Section ===
+[section]
+recentlyUpdated = "Yakın zamanda güncellenmiş"
+# === Section ===
+
+# === Pagination ===
+[pagination]
+more = "Daha Fazla"
+# === Pagination ===
+
+# === partials/header.html ===
+[header]
+selectLanguage = "Dili seç"
+noMoretTranslations = "No more translations"
+switchTheme = "Temayı değiştir"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[footer]
+poweredBySome = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
+siteUV = "Total visitors"
+sitePV = "Total visits"
+siteRunning = "Website running ..."
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[comment]
+valineLang = "tr"
+valinePlaceholder = "Yorumunuz ..."
+facebookLanguageCode = "tr_TR"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[assets]
+search = "Ara"
+searchPlaceholder = "Başlıkları ya da içerikleri ara ..."
+clear = "Temizle"
+cancel = "İptal et"
+noResultsFound = "Herhangi bir sonuç bulunamadı"
+lunrLanguageCode = "tr"
+copyToClipboard = "Panoya kopyala"
+editLockTitle = "Lock editable code block"
+editUnLockTitle = "Unlock editable code block"
+cookieconsentMessage = "Bu web sitesi, deneyiminizi geliştirmek için Çerezler kullanır."
+cookieconsentDismiss = "Anladım!"
+cookieconsentLink = "Daha fazla bilgi edin"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "Paylaş"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[single]
+contents= "İçerik"
+repost= "Repost"
+publishedOnDate= "Yayınlanma tarihi {{ .Date }}"
+includedInCategories= "included in {{ .Categories }}"
+views = "görüntülenme sayısı"
+comments = "yorumlar"
+author = "Yazar"
+updatedOnDate = "Updated on {{ .Date }}"
+readMarkdown = "Markdown versiyonuna bak"
+editThisPage = "Bu sayfayı düzenle"
+back = "Geri"
+home = "Ana Sayfa"
+readMore = "Devamını Oku..."
+expirationReminder = "This article was last updated on {{ .Date }}, the content may be out of date."
+encryptedAbstract = "This article has been encrypted, so its raw content is invisible!"
+encryptedMessage = "Please enter the password"
+password = "Password"
+encryptyAgain = "Encrypt again"
+
+[single.wordCount]
+one = "Bir kelime"
+other = "{{ .Count }} kelime"
+
+[single.readingTime]
+one = "Bir dakika"
+other = "{{ .Count }} dakika"
+
+[single.reward]
+donate = "Donate"
+wechatpay = "WeChat Pay"
+alipay = "Alipay"
+paypal = "PayPal"
+bitcoin = "Bitcoin"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "Sayfa bulunamadı"
+
+[pageNotFoundText]
+other = "Maalesef aradığınız sayfa mevcut değil."
+# === 404.html ===
+
+# === offline ===
+[offlineTitle]
+other = "Offline"
+
+[offlineText]
+other = "İnternete bağlı değilsiniz, sadece önbelleğe alınmış sayfalar kullanılabilir olacak."
+# === offline ===
+
+# === shortcodes/admonition.html ===
+[admonition]
+note = "Not"
+abstract = "Abstract"
+info = "Info"
+tip = "Tüyo"
+success = "Success"
+question = "Soru"
+warning = "Uyarı"
+failure = "Failure"
+danger = "Tehlike"
+bug = "Bug"
+example = "Örnek"
+quote = "Alıntı"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[version]
+new = "YENİ"
+changed = "DEĞİŞTİ"
+deleted = "SİLİNDİ"
+# === shortcodes/version.html ===
